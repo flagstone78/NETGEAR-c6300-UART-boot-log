@@ -1,0 +1,19 @@
+
+         CEFDK - Consumer Electronics Firmware Development Kit Setup
+                       Advanced Features
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ @   Automatic boot:             YES                                         @
+ @   CEFDK Net Support:          On                                          @
+ @   CEFDK IP Mode:              Static                                      @
+ @   GbE GMUX Mode:              L2SW Mode                                   @
+ @   Boot Shell Timeout:         2                                           @
+ @   Boot Type:                  Normal                                      @
+ @   Board Type:                 HP                                          @
+ @   DOCSIS DDR Offset (Hex):    8000000                                     @
+ @   DOCSIS DDR Size (Hex):      8000000                                     @
+ @   Flash Layout Type:          Intel 128MB layout Rev 1                    @
+ @                                                                           @
+ @###########################################################################@
+ @   Esc: Return to Previous Menu                 <Arrow Keys> : Select Item @
+ @   F1: Save & Exit Setup (or F3, shift-S)                                  @
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
