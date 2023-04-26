@@ -1,0 +1,498 @@
+
+▒
+
+Cat Mountain B2- Boot Ram.
+Version: 0.1.14 (Apr  8 2013, 10:30:47)
+
+Boot Param memory dump:
+[0x1FFC] - 0x00010014
+[0x1FF8] - 0x00000001
+[0x1FF4] - 0x00000001
+[0x1FF0] - 0x00000001
+[0x1FEC] - 0x00000001
+[0x1FE8] - 0x08000000
+[0x1FE4] - 0x08000000
+[0x1FE0] - 0x001E0000
+[0x1FDC] - 0x001E0200
+[0x1FD8] - 0x03C04000
+[0x1FD4] - 0x00040000
+[0x1FD0] - 0x03C44000
+[0x1FCC] - 0x03C44000
+[0x1FC8] - 0x00010000
+[0x1FC4] - 0x00000000
+[0x1FC0] - 0x00000000
+[0x1FBC] - 0x00000000
+[0x1FB8] - 0x00000000
+[0x1FB4] - 0x00000000
+[0x1FB0] - 0x00000000
+[0x1FAC] - 0x00000000
+[0x1FA8] - 0x00000000
+[0x1FA4] - 0x00000000
+[0x1FA0] - 0x00000000
+[0x1F9C] - 0x0B0A0807
+[0x1F98] - 0x01090D0C
+[0x1F94] - 0xFF050302
+[0x1F90] - 0x00000002
+[0x1F8C] - 0x00000006
+[0x1F88] - 0x000528F0
+[0x1F84] - 0x001D8000
+[0x1F80] - 0x00000070
+[0x1F7C] - 0xFFFFFFFF
+[0x1F78] - 0x00008000
+[0x1F74] - 0x00000020
+[0x1F70] - 0x00080800
+[0x1F6C] - 0x00010000
+[0x1F68] - 0x00090800
+[0x1F64] - 0x00009400
+[0x1F60] - 0x00099C00
+[0x1F5C] - 0x00065400
+[0x1F58] - 0x000FF800
+[0x1F54] - 0x00000800
+[0x1F50] - 0x00100000
+[0x1F4C] - 0x00000800
+[0x1F48] - 0x000FF000
+[0x1F44] - 0x00000800
+[0x1F40] - 0x00000000
+Load U-Boot from eMMC/NAND Flash
+eMMC/NAND copy from 0x03C04000 to 0x49FB0000 (len:262144).
+Done.
+
+
+U-Boot 1.2.0 (May  6 2013 - 17:52:39)Puma6 - PSPU-Boot 2.0.0.24
+
+DRAM:  128 MB
+*** Warning - Unsupported Flash detected, flash is unusable
+
+Manufacturer ID: 0xFF
+Type: 0xFF
+Density: 0xFF
+Extended ID: {0xFF, 0xFF}
+failed to probe Flash (bank 0)
+Error: failed to probe Flash
+Flash:  0 kB
+MMC:   sdhci_puma6: 0
+MMC info:
+  Manufacturer ID: 0
+  OEM ID: 0
+  Name: MMC128
+  MMC version 4.4
+  High Capacity: No
+  Dual Data Rate (DDR): No
+  Bus Width: 8-bit
+  Clock: 50000000
+  Rd Block Len: 512
+  Capacity: 112.4 MB (117833728 bytes)
+In:    serial
+Out:   serial
+Err:   serial
+Setting Board-Type to 1
+Read AID 2
+set ACTIMAGE to 2
+Press SPACE to abort autoboot in 1 second(s)
+*** ACTIMAGE = 2, will try to boot UBFI2 stored @0x03F58000
+## Executing script at 03f58000
+========== Running script (puma6) ver 2.5 =========
+*** Running from UBFI2 partition @0x4A000000 (eMMC)
+Load address ............. 0x3f5a310
+Kernel partition offset .. 0x2360
+kernel size .............. 0x1744a0
+Root FS partition offset . 0x176800
+Root FS size ............. 0x4ec800
+Additional FS ............ ,0x36f400(FS1)ro
+========== Script Done ============================
+
+*** UBFI2 bootscript executed successfully.
+Start booting...
+## Booting image at 03f5a310 ...
+ARM MBX sending 'eMMC done.' notification...
+   Image Name:   Multi Image File
+   Image Type:   ARM Linux Multi-File Image (uncompressed)
+   Data Size:    10289328 Bytes =  9.8 MB
+   Load Address: 00a00000
+   Entry Point:  00a00000
+   Contents:
+   Image 0:  1524896 Bytes =  1.5 MB
+   Image 1:  5163008 Bytes =  4.9 MB
+   Image 2:  3601408 Bytes =  3.4 MB
+OK
+
+Starting kernel ...
+
+Starting LZMA Uncompression Algorithm.
+Compressed file is LZMA format.
+[Debug - Kerenl] LZMA Uncompression - Done.
+Linux version 2.6.39.3 (chiaming@c240) (gcc version 4.7.3 (Buildroot 2013.08.1) ) #1 PREEMPT Wed Nov 4 08:48:02 CST 2020
+CPU: ARMv6-compatible processor [410fb764] revision 4 (ARMv7), cr=00c538ff
+CPU: VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine: puma6
+Ignoring unrecognised tag 0x00000000
+Memory policy: ECC disabled, Data cache writeback
+Reserved 0k DSP memory starting from Physical 0x50000000
+Initialized Peripheral Port Remap Register to base : 0x20000000
+Puma-6 system_rev = 1505 -- docsis ip rev = 16
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+Kernel command line: root=/dev/mmcblk0p11 rootwait ro nvram=/dev/mmcblk0p9 fs1=/dev/mmcblk0p13 console=ttyS0,115200n8 ethaddr0= usbhostaddr=00.50.f1.18.cb.f5 boardtype=0x00000001 eth0_mdio_phy_addr= ext_switch_reset_gpio= threadirqs
+Puma6 boardtype Id 1
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Memory: 128MB = 128MB total
+Memory: 124228k/124228k available, 6844k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    DMA     : 0xffc00000 - 0xffe00000   (   2 MB)
+    vmalloc : 0x88800000 - 0xd0000000   (1144 MB)
+    lowmem  : 0x80000000 - 0x88000000   ( 128 MB)
+    modules : 0x7f000000 - 0x80000000   (  16 MB)
+      .init : 0x80018000 - 0x8003b000   ( 140 kB)
+      .text : 0x8003b000 - 0x8042d000   (4040 kB)
+      .data : 0x8042e000 - 0x80452120   ( 145 kB)
+Preemptable hierarchical RCU implementation.
+NR_IRQS:150
+Interrupt controller revision : 4e822100
+CRU 13 is allready in CRU state 3 [ignore operation]
+Precise sched_clock: load 35156, nsec/count 284
+Puma6 Timer0 initialized
+console [ttyS0] enabled
+INITIAL_JIFFIES 4294937296
+jiffies 4294937298
+Sync FRC (hi 0 lo 38) to timer0 (0)
+Calibrating delay loop... 447.28 BogoMIPS (lpj=2236416)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+hw perfevents: enabled with v6 PMU driver, 3 counters available
+NET: Registered protocol family 16
+hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+
+PAL_cppi4Init : domain is 0, cfg ptr is 0x8043B5A0
+PAL_cppi4Init: CPPI 4.1 API initialized successfully.
+
+PAL_cppi4Init : domain is 0, cfg ptr is 0x00000000
+HW Mutex: Intel(R) HW MUTEX driver built on Nov  4 2020 @ 08:42:51
+HW Mutex: pmaster 0x8782b680 ,irq_num 74, reg_base 0xdffe1800
+HW Mutex: driver is running. HW MUTEX Code-Id = 0x1000c936
+SRAM: Intel(R) SRAM driver built on Nov  4 2020 @ 08:42:52
+SRAM: Create device: /dev/sram_drv0
+SRAM: Create proc file /proc/bootparams
+AEP: Intel(R) AEP driver built on Nov  4 2020 @ 08:42:50
+AEP: Disabled.
+bio: create slab <bio-0> at 0
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+TCP: Hash tables configured (established 4096 bind 4096)
+TCP reno registered
+UDP hash table entries: 256 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+Initializing Cru Control  module
+GPIO: Intel(R) GPIO driver built on Nov  4 2020 @ 08:42:49
+GPIO: Create device: /dev/docsis_gpio_dev
+GPIO: Add proc file: /proc/gpio
+IOSF-SB: Intel(R) IOSF-SB driver built on Nov  4 2020 @ 08:42:51
+IOSF-SB: Create device: /dev/docsis_iosfsb_drv
+PUNIT: Intel(R) P-UNIT driver built on Nov  4 2020 @ 08:42:51
+PUNIT: Create device: /dev/p_unit
+PUNIT: Create proc file: /proc/P-UNIT
+P-UNIT : Enable reset event handling ...
+0 = result from request_irq
+
+==============================================================================
+P-UNIT : FW version is [ 1.0.9 ]
+P-UNIT : FW is backward compatible down to Silicon Stepping [A0]
+P-UNIT : FW build version is [ P-196 ]
+P-UNIT : Last reset reason   = 0x00000000 [ RESET_COLD_BOOT                ]
+P-UNIT : Last reset origin   = 0x00000002 [ RESET_ORIGIN_ATOM              ]
+P-UNIT : Last reset duration = 0.0 Seconds
+==============================================================================
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+NTFS driver 2.1.30 [Flags: R/W].
+JFFS2 version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+msgmni has been set to 242
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 249)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+serial8250: ttyS0 at MMIO 0x70003 (irq = 9) is a TI 16550A
+serial8250: ttyS1 at MMIO 0x50003 (irq = 7) is a TI 16550A
+serial8250: ttyS2 at MMIO 0x60003 (irq = 8) is a TI 16550A
+TI LED driver initialized [major=248]
+PUMA6 SPI Controller: Control Reg        [0xDFFE0100]: 0x44453400
+PUMA6 SPI Controller: Split Reg          [0xDFFE0104]: 0x00000008
+PUMA6 SPI Controller: Current Address Reg[0xDFFE0108]: 0x00000000
+PUMA6 SPI Controller: Addressing mode set to: 3
+Serial Flash [Bus:0 CS:0] : No device found
+Serial Flash [Bus:0 CS:1] : No device found
+PUMA6 SPI Controller driver at 0xdffe0100 bus_num = 0x0
+(null): TI Codec SPI Controller driver at 0xd01200c8           (irq = 0)
+ MODULE: PDSP Start ...
+ MODULE: PP Start ...
+Open netlink socket for DDH notifications.
+Netlink socket for DDH notifications opened.
+HIL Core: Profile intrusive_pp2k has been Loaded.
+i2c /dev entries driver
+watchdog: TI Avalanche Watchdog Timer: timer margin 35 sec
+cpuidle: using governor ladder
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+NP-CPU MBX waits for 'eMMC advance mode ready' notification from APP-CPU ...
+receive_specific_event_notification Event=0x4  parameter = 0x30
+NP-CPU MBX received 'eMMC advance mode ready' notification from APP-CPU.
+mmc0: SDHCI controller on platform [sdhci-puma6.0] using ADMA
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (1941 buckets, 7764 max)
+ctnetlink v0.93: registering with nfnetlink.
+nf_conntrack_rtsp v0.7 loading
+xt_time: kernel timezone is -0000
+IPVS: Registered protocols ()
+IPVS: Connection hash table configured (size=4096, memory=32Kbytes)
+IPVS: Creating netns size=744 id=0
+IPVS: ipvs loaded.
+IPv4 over IPv4 tunneling driver
+GRE over IPv4 demultiplexor driver
+GRE over IPv4 tunneling driver
+nf_nat_rtsp v0.7 loading
+ip_tables: (C) 2000-2006 Netfilter Core Team
+ipt_CLUSTERIP: ClusterIP Version 0.8 loaded successfully
+arp_tables: (C) 2002 David S. Miller
+netfilter PSD loaded - (c) astaro AG
+TCP cubic registered
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+ip6_gre: GRE over IPv6 tunneling driver
+mmc0: new high speed MMC card at address 0001
+NET: Registered protocol family 17
+mmcblk0: mmc0:0001 MMC128 112 MiB
+NET: Registered protocol family 15
+Bridge firewalling registered
+Ebtables v2.0 registered
+L2TP core driver, V2.0
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+
+ MCS control init done
+VFP support v0.3: not present
+ mmcblk0: p1 p2 p3 p4 < p5 p6 p7 p8 p9 p10 p11 p12 p13 >
+mmcblk0: p13 size 34816 extends beyond EOD, truncated
+NP-CPU MBX Send notification to APP-CPU - 'Card initialization complete'...
+VFS: Mounted root (squashfs filesystem) readonly on device 179:11.
+Freeing init memory: 140K
+init started: BusyBox v1.29.2 (2020-11-04 08:51:13 CST)
+starting pid 34, tty '/dev/tts/0': '/etc/init.d/rcS > /dev/console 2> /dev/console'
+Calibrate: prev cal 0, new cal 0
+
+About to set realtime runtime...
+
+
+About to initialize PP ...
+
+mknod: /dev/pp: File exists
+
+PAL_cppi4Init : domain is 0, cfg ptr is 0x00000000
+main:365 (pid=46): hal_pp_fw_download SUCCESS!
+
+
+The PP Should be running now ...
+
+/dev/mmcblk0p9: clean, 164/256 files, 338/2048 blocks
+The device /dev/mmcblk0p9 was scan with fsck.ext3 and the return value is 0
+mount: mounting /dev/mmcblk0p9 on /nvram failed: Invalid argument
+Please format the device /dev/mmcblk0p9 to ext3 file system
+eMMC F/W Auto-Upgrade: /nvram/mmc_settings.cfg not exist.
+fss=/dev/mmcblk0p13-FS1
+/etc/init.d/rcS: /etc/config: line 1948: CROSS: not found
+
+
+========================================================
+Intel C233 release 4.5.12.79
+Build date: Thursday, November 05 2020, 21:50:02
+Copyright ?2011, Intel Corporation.
+========================================================
+
+
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Mac Address from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Host IP from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Lan MAC from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Lan IP from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Lan Mask from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM USB Host MAC from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM USB Device MAC from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM PGA type from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM TOP table from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Tuner type from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Root Public Valid from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Root Public Length from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Baud Rate from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Frequency Plan from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Production Date from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Rng Holdoff Class Id from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM HW Revision from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM HW Patch from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Serial Number from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Interface Name from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM MIB level from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM PHY Regs from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Number Of Tuners from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM DOCSIS PHY Fact from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Mfg Org Name from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Mfg Org Name Len from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Euro Cer File Name from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Euro Key File Name from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Us Cer File Name from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Us Key File Name from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get Support Baby-Puma from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get Rev1 Default ATDMA from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get Board configuration from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get MT2170 driver mode from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get Puma6 US DAC mode from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get Puma6 US frequency range mode from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get Puma6 hsif puma6 to tuner cross cancel from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get CM Internal L2 Switch MAC from NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_GetParamFromNvram:1885 (pid=148): Get Extended US power from NVRAM failed with error number -2
+ProductionDb_Init:1435 (pid=148): Restoring production DB from NVRAM ... FAIL !!
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Mac Address to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Host IP to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Lan MAC to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Lan IP to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Lan Mask to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM USB Host MAC to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM USB Device MAC to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM PGA type to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM TOP table to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Tuner type to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Root Public Valid to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Root Public Length to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Baud Rate to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Frequency Plan to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Production Date to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Rng Holdoff Class Id to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM HW Revision to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM HW Patch to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Serial Number to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Interface Name to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM MIB level to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM PHY Regs to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Number Of Tuners to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM DOCSIS PHY Fact to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Mfg Org Name to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Mfg Org Name Len to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Euro Cer File Name to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Euro Key File Name to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Us Cer File Name to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Us Key File Name to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set Support Baby-Puma to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set Rev1 Default ATDMA to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set Board configuration to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set MT2170 driver mode to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set Puma6 US DAC mode to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set Puma6 US frequency range mode to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set Puma6 hsif puma6 to tuner cross cancel to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set CM Internal L2 Switch MAC to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+ProductionDb_SetParamToNvram:1919 (pid=148): Set Extended US power to NVRAM failed with error number -2
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+NVM_commit:569 (pid=148): Shared memory failure
+init_shm:314 (pid=148): Failed to create /nvram//1, No such file or directory
+NVM_end:693 (pid=148): Shared memory failure
+ProductionDb_Init:1440 (pid=148): Saving production DB to NVRAM ... FAIL !!
+Failed ProductionDb_Init()
+Setup memory config from file "/etc/sysctl_mem.conf"
+vm.panic_on_oom = 2
+vm.swappiness = 0
+vm.overcommit_memory = 2
+vm.overcommit_ratio = 100
+ash: (pid=158):: unknown operand
+ash: (pid=158):: unknown operand
+/etc/scripts/sys_check.sh: /etc/config: line 1948: CROSS: not found
+sh: (pid=164):: unknown operand
+TI Watchdog-RT daemon started <kick interval = 1
+Please press Enter to activate this console. iosfsb_read:: fail to read NO ACK received.
+Error in reading Punit command from iosfsb_read
+
+ PUNIT Interrupt - unknown command 0x0000, data 0x00000000
+process '-/bin/sh' (pid 167) exited. Scheduling for restart.
+
+Please press Enter to activate this console.
