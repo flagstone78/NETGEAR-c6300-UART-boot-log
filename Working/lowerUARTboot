@@ -1,0 +1,1501 @@
+▒Fail to enable battery: temperature safety violation
+
+
+AC_BOOT
+POST: 0xb03
+wdt: reset type = 0, reset reason = 0
+POST: 0xc02
+cefdk_rom_base_addr: 0x00280800
+POST: 0xc1f
+wdt: acboot win2 end, counter=867007
+POST: 0xf02
+Warning: No device found in chip select 0
+Spi Flash Init Failed and disable SPI Fl
+Intel(R) Consumer Electronics Firmware Development Kit (Intel(R) CEFDK)
+Copyright (C) 1999-2012 Intel Corporation. All rights reserved.
+Build Time (05/21/14 22:46:51).
+POST: 0xf05Loading 8051_fw from MFH...
+POST: 0xf07
+Set flash layout to Intel 128MB layout Rev 1
+POST: 0xf19
+Waiting for 5 sec for DOCSIS PLL1 ready...
+DOCSIS PLL1 ready
+▒Fail to enable battery: temperature safety violation
+
+
+COLD_BOOT
+POST: 0xb03
+wdt: reset type = 1, reset reason = 2
+POST: 0xc02
+cefdk_rom_base_addr: 0x00280800
+POST: 0xc1f
+wdt: reset win2 end,  counter=840
+POST: 0xf02
+Warning: No device found in chip select 0
+Spi Flash Init Failed and disable SPI Fl
+Intel(R) Consumer Electronics Firmware Development Kit (Intel(R) CEFDK)
+Copyright (C) 1999-2012 Intel Corporation. All rights reserved.
+Build Time (05/21/14 22:46:51).
+POST: 0xf05Loading 8051_fw from MFH...
+POST: 0xf07
+Set flash layout to Intel 128MB layout Rev 1
+POST: 0xf19
+Waiting for 5 sec for DOCSIS PLL1 ready...
+DOCSIS PLL1 ready
+POST: 0xfa0
+SMM: Ok
+POST: 0xf24
+ACPI Init: finished with table region from 00011ab0 to 00018000
+acpi: Created tables at 00011ab0-00018000
+POST: 0xf29
+CEFDK Version        : CE2600 build (SMP enabled)
+Built from SDK       : IntelCE-4.3.14214.344841
+8051 Firmware        : A0-1.2.0 build R 0x20A
+8051 FW I/O Module   :
+Silicon Stepping     : D0
+Silicon SKU          : 0x14B
+Board Set As         : Harbor Park
+CPU Threads          : 2
+CPU Multiplier       : 6
+CPU Bus Speed        : 100 MHz
+Memory Size          : 256 MB
+Memory Type & Speed  : x16 DDR3-1333 (10-10-10)
+Trusted Boot         : Untrusted
+Boot Mode            : eMMC-NAND (STRAPS)
+Registered net controller: e1000
+Init External Switch for board Type: 0
+Timing data c003
+ESWITCH ID 1721
+1000M FD Link is ready!
+Configure IP via static IP.
+Mac address is    : 00:10:18:00:00:01
+Host IP address is: 192.168.100.64
+Subnet Mask is    : 255.255.255.0
+Gateway address is: 192.168.100.1
+
+================================================
+WARNING:
+  Please make sure the board type and DOCSIS DDR offset/size are set correctly,
+  otherwise DOCSIS subsystem won't boot!
+  If not sure, please use "settings" shell command to show the setup menu,
+  then check "Advanced Features".
+================================================
+
+Press 'Enter' within 2 seconds to disable automatic boot.
+Hit a key to start the shell...
+Running auto script...
+shell> ord4 0xC80D0000 0x03000000
+shell> ord4 0xdf9fa004 0xB
+shell> load -m 0x200000 -i a -t emmc
+get Active Image info successfully:200000, 400000, 1, 1, 3
+eMMC kernel command:  root=/dev/mmcblk0p3
+load data from emmc
+load done.
+shell> bootkernel -b 0x200000 "console=ttyS0,115200 ip=192.168.100.100"
+Working Cmd: console=ttyS0,115200 ip=192.168.100.100 root=/dev/mmcblk0p3
+CMD(0x48000)='console=ttyS0,115200 ip=192.168.100.100 root=/dev/mmcblk0p3 '
+WARNING: Ancient bootloader, some functionality may be limited!
+Initializing cgroup subsys cpuset
+Initializing cgroup subsys cpu
+Linux version 2.6.39 (root@cable-Veriton-M490) (gcc version 4.5.1 (IntelCE toolchain-V5 Thu Sep 7 15:45:45 CST 2017) ) #2 SMP PREEMPT Fri Jan 18 11:07:27 CST 2019
+BIOS-provided physical RAM map:
+ BIOS-e820: 0000000000000000 - 0000000000011ab0 (reserved)
+ BIOS-e820: 0000000000011ab0 - 0000000000018000 (ACPI data)
+ BIOS-e820: 0000000000018000 - 0000000000020000 (reserved)
+ BIOS-e820: 0000000000020000 - 0000000000040000 (usable)
+ BIOS-e820: 0000000000040000 - 0000000000100000 (reserved)
+ BIOS-e820: 0000000000100000 - 0000000007400000 (usable)
+ BIOS-e820: 0000000007400000 - 0000000010000000 (reserved)
+ BIOS-e820: 00000000fec00000 - 00000000fec00400 type 6
+ BIOS-e820: 00000000fee00000 - 00000000fee00400 type 7
+extended physical RAM map:
+ reserve setup_data: 0000000000000000 - 0000000000011ab0 (reserved)
+ reserve setup_data: 0000000000011ab0 - 0000000000018000 (ACPI data)
+ reserve setup_data: 0000000000018000 - 0000000000020000 (reserved)
+ reserve setup_data: 0000000000020000 - 0000000000040000 (usable)
+ reserve setup_data: 0000000000040000 - 0000000000100000 (reserved)
+ reserve setup_data: 0000000000100000 - 0000000007400000 (usable)
+ reserve setup_data: 0000000007400000 - 0000000010000000 (reserved)
+ reserve setup_data: 00000000fec00000 - 00000000fec00400 type 6
+ reserve setup_data: 00000000fee00000 - 00000000fee00400 type 7
+NX (Execute Disable) protection: active
+DMI not present or invalid.
+last_pfn = 0x7400 max_arch_pfn = 0x1000000
+init_memory_mapping: 0000000000000000-0000000007400000
+ACPI: RSDP 0009fc00 00024 (v02 INTEL )
+ACPI: RSDT 00017fb0 00030 (v01 INTEL           00000000      00000000)
+ACPI: FACP 00013b20 000F4 (v03 INTEL           00000000      00000000)
+ACPI: DSDT 00013c20 010D4 (v01 Intel    CE2600 00000001 INTL 20091112)
+ACPI: FACS 00017f70 00040
+ACPI: APIC 00011af0 00068 (v01 INTEL           00000000      00000000)
+ACPI: HPET 00011ab0 00038 (v01 INTEL           00000000      00000000)
+0MB HIGHMEM available.
+116MB LOWMEM available.
+  mapped low ram: 0 - 07400000
+  low ram: 0 - 07400000
+Zone PFN ranges:
+  DMA      0x00000020 -> 0x00001000
+  Normal   0x00001000 -> 0x00007400
+  HighMem  empty
+Movable zone start PFN for each node
+early_node_map[2] active PFN ranges
+    0: 0x00000020 -> 0x00000040
+    0: 0x00000100 -> 0x00007400
+Using APIC driver default
+ACPI: PM-Timer IO Port: 0x1008
+ACPI: LAPIC (acpi_id[0x00] lapic_id[0x00] enabled)
+ACPI: LAPIC (acpi_id[0x01] lapic_id[0x01] enabled)
+ACPI: IOAPIC (id[0x00] address[0xfec00000] gsi_base[0])
+IOAPIC[0]: apic_id 0, version 32, address 0xfec00000, GSI 0-23
+ACPI: IOAPIC (id[0x01] address[0xbffff000] gsi_base[24])
+IOAPIC[1]: apic_id 1, version 32, address 0xbffff000, GSI 24-47
+ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 high level)
+ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+Using ACPI (MADT) for SMP configuration information
+ACPI: HPET id: 0x8086a201 base: 0xfed00000
+SMP: Allowing 2 CPUs, 0 hotplug CPUs
+Allocating PCI resources starting at 10000000 (gap: 10000000:eec00000)
+setup_percpu: NR_CPUS:8 nr_cpumask_bits:8 nr_cpu_ids:2 nr_node_ids:1
+PERCPU: Embedded 12 pages/cpu @c7000000 s25792 r0 d23360 u1048576
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 29240
+Kernel command line: console=ttyS0,115200 ip=192.168.100.100 root=/dev/mmcblk0p3
+PID hash table entries: 512 (order: -1, 2048 bytes)
+Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+Initializing CPU#0
+allocated 474624 bytes of page_cgroup
+please try 'cgroup_disable=memory' option if you don't want memory cgroups
+Initializing HighMem for node 0 (00000000:00000000)
+Memory: 107600k/118784k available (5876k kernel code, 10288k reserved, 1984k data, 400k init, 0k highmem)
+virtual kernel memory layout:
+    fixmap  : 0xfff18000 - 0xfffff000   ( 924 kB)
+    pkmap   : 0xffc00000 - 0xffe00000   (2048 kB)
+    vmalloc : 0xc7c00000 - 0xffbfe000   ( 895 MB)
+    lowmem  : 0xc0000000 - 0xc7400000   ( 116 MB)
+      .init : 0xc17ae000 - 0xc1812000   ( 400 kB)
+      .data : 0xc15bd05d - 0xc17ad100   (1984 kB)
+      .text : 0xc1000000 - 0xc15bd05d   (5876 kB)
+Checking if this processor honours the WP bit even in supervisor mode...Ok.
+SLUB: Genslabs=15, HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+Preemptable hierarchical RCU implementation.
+        RCU-based detection of stalled CPUs is disabled.
+        Verbose stalled-CPUs detection is disabled.
+NR_IRQS:512
+Extended CMOS year: 2000
+Console: colour dummy device 80x25
+console [ttyS0] enabled
+Fast TSC calibration using PIT
+Detected 600.036 MHz processor.
+Calibrating delay loop (skipped), value calculated using timer frequency.. 1200.07 BogoMIPS (lpj=2400144)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+Initializing cgroup subsys ns
+ns_cgroup deprecated: consider using the 'clone_children' flag without the ns_cgroup.
+Initializing cgroup subsys cpuacct
+Initializing cgroup subsys memory
+Initializing cgroup subsys devices
+Initializing cgroup subsys freezer
+Initializing cgroup subsys blkio
+Initializing cgroup subsys perf_event
+CPU: Physical Processor ID: 0
+CPU: Processor Core ID: 0
+mce: CPU supports 5 MCE banks
+CPU0: Thermal monitoring enabled (TM1)
+using mwait in idle threads.
+ACPI: Core revision 20110316
+Enabling APIC mode:  Flat.  Using 2 I/O APICs
+..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+CPU0: Intel(R) Atom(TM) CPU  612   @  600MHz stepping 08
+Performance Events: PEBS fmt0+, generic architected perfmon, Intel PMU driver.
+... version:                3
+... bit width:              40
+... generic registers:      2
+... value mask:             000000ffffffffff
+... max period:             000000007fffffff
+... fixed-purpose events:   3
+... event mask:             0000000700000003
+Booting Node   0, Processors  #1 Ok.
+Initializing CPU#1
+Brought up 2 CPUs
+Total of 2 processors activated (2400.05 BogoMIPS).
+NET: Registered protocol family 16
+ACPI: bus type pci registered
+PCI: Using configuration type 1 for base access
+pcimode=0x0
+bio: create slab <bio-0> at 0
+ACPI: Interpreter enabled
+ACPI: (supports S0 S3 S5)
+ACPI: Using IOAPIC for interrupt routing
+ACPI: No dock devices found.
+PCI: Ignoring host bridge windows from ACPI; if necessary, use "pci=use_crs" and report a bug
+ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-fe])
+pci 0000:00:01.0: PCI bridge to [bus 01-01] (subtractive decode)
+pci 0000:00:1c.0: PCI bridge to [bus 02-02]
+pci 0000:00:1c.1: PCI bridge to [bus 03-03]
+ACPI: PCI Interrupt Link [LSAT] (IRQs *47)
+ACPI: PCI Interrupt Link [LUSB] (IRQs *46)
+ACPI: PCI Interrupt Link [LGBE] (IRQs *45)
+ACPI: PCI Interrupt Link [LUAR] (IRQs *38)
+ACPI: PCI Interrupt Link [LDOS] (IRQs *24)
+ACPI: PCI Interrupt Link [LGPA] (IRQs *25)
+ACPI: PCI Interrupt Link [LEPU] (IRQs *25)
+ACPI: PCI Interrupt Link [LHVE] (IRQs *25)
+ACPI: PCI Interrupt Link [LAVC] (IRQs *44)
+ACPI: PCI Interrupt Link [LHDR] (IRQs *44)
+ACPI: PCI Interrupt Link [LGPB] (IRQs *26)
+ACPI: PCI Interrupt Link [LCRS] (IRQs *27)
+ACPI: PCI Interrupt Link [LTSP] (IRQs *28)
+ACPI: PCI Interrupt Link [LTSD] (IRQs *29)
+ACPI: PCI Interrupt Link [LWTG] (IRQs *42)
+ACPI: PCI Interrupt Link [LLW0] (IRQs *30)
+ACPI: PCI Interrupt Link [LLW1] (IRQs *31)
+ACPI: PCI Interrupt Link [LL2W] (IRQs *32)
+ACPI: PCI Interrupt Link [LDSD] (IRQs *33)
+ACPI: PCI Interrupt Link [LMOC] (IRQs *34)
+ACPI: PCI Interrupt Link [LMTX] (IRQs *35)
+ACPI: PCI Interrupt Link [LSEC] (IRQs *36)
+ACPI: PCI Interrupt Link [LMMC] (IRQs *37)
+ACPI: PCI Interrupt Link [LIDL] (IRQs *39)
+ACPI: PCI Interrupt Link [LPWM] (IRQs *39)
+ACPI: PCI Interrupt Link [LI2C] (IRQs *40)
+ACPI: PCI Interrupt Link [LPNT] (IRQs *41)
+ACPI: PCI Interrupt Link [LAEP] (IRQs *44)
+ACPI: PCI Interrupt Link [LWAN] (IRQs *33)
+ACPI: PCI Interrupt Link [LMPD] (IRQs *43)
+ACPI: PCI Interrupt Link [LNKA] (IRQs *4 5 6 7 9 10 11 12 14 15)
+ACPI: PCI Interrupt Link [LNKB] (IRQs *4 5 6 7 9 10 11 12 14 15)
+ACPI: PCI Interrupt Link [LNKC] (IRQs *4 5 6 7 9 10 11 12 14 15)
+ACPI: PCI Interrupt Link [LNKD] (IRQs *4 5 6 7 9 10 11 12 14 15)
+vgaarb: loaded
+SCSI subsystem initialized
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+PCI: Using ACPI for IRQ routing
+ACPI: PCI Interrupt Link [LMTX] enabled at IRQ 35
+ce-hw-mutex 0000:01:0e.0: PCI INT A -> Link[LMTX] -> GSI 35 (level, high) -> IRQ 35
+mem_iobase = 0xdffe1800, mem_iosize = 0x800
+pmaster 0xc6ce6600 mem_base 0xdffe1800, io_size 0x800,irq_num 35, reg_base 0xc7c10800
+Intel(R) HW MUTEX driver built on Jan 18 2019 @ 11:06:10
+ACPI: PCI Interrupt Link [LDOS] enabled at IRQ 24
+mailbox driver 0000:01:1f.0: PCI INT A -> Link[LDOS] -> GSI 24 (edge, high) -> IRQ 24
+Intel(R) NPCPU <-> APPCPU Event Mailbox Device Driver built on Jan 18 2019 @ 11:05:10
+enable IRQ #24 for device named ce_mailbox
+Switching to clocksource hpet
+pnp: PnP ACPI init
+ACPI: bus type pnp registered
+pnp: PnP ACPI: found 2 devices
+ACPI: ACPI bus type pnp unregistered
+pci 0000:00:01.0: PCI bridge to [bus 01-01]
+pci 0000:00:01.0:   bridge window [io  disabled]
+pci 0000:00:01.0:   bridge window [mem 0xc0000000-0xdfffffff]
+pci 0000:00:01.0:   bridge window [mem pref disabled]
+pci 0000:00:1c.0: PCI bridge to [bus 02-02]
+pci 0000:00:1c.0:   bridge window [io  0x8000-0x8fff]
+pci 0000:00:1c.0:   bridge window [mem 0xbfe00000-0xbfefffff]
+pci 0000:00:1c.0:   bridge window [mem 0xbfb00000-0xbfbfffff 64bit pref]
+pci 0000:00:1c.1: PCI bridge to [bus 03-03]
+pci 0000:00:1c.1:   bridge window [io  0x9000-0x9fff]
+pci 0000:00:1c.1:   bridge window [mem 0xbfc00000-0xbfdfffff]
+pci 0000:00:1c.1:   bridge window [mem 0xbfa00000-0xbfafffff 64bit pref]
+pci 0000:00:1c.0: PCI INT A -> GSI 16 (level, low) -> IRQ 16
+pci 0000:00:1c.1: PCI INT B -> GSI 17 (level, low) -> IRQ 17
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+TCP: Hash tables configured (established 4096 bind 4096)
+TCP reno registered
+UDP hash table entries: 128 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 128 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+platform rtc_cmos: registered platform RTC device (no PNP device found)
+microcode: CPU0 sig=0x30658, pf=0x40, revision=0x4
+microcode: CPU1 sig=0x30658, pf=0x40, revision=0x4
+microcode: Microcode Update Driver: v2.00 <tigran@aivazian.fsnet.co.uk>, Peter Oruba
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+JFFS2 version 2.2. (NAND) (SUMMARY)  © 2001-2006 Red Hat, Inc.
+fuse init (API version 7.16)
+SGI XFS with security attributes, large block/inode numbers, no debug enabled
+msgmni has been set to 210
+alg: No test for stdrng (krng)
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 253)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+Serial: 8250/16550 driver, 2 ports, IRQ sharing enabled
+serial8250: ttyS0 at I/O 0x3f8 (irq = 38) is a GEN3_serial
+serial8250: ttyS1 at I/O 0x2f8 (irq = 38) is a GEN3_serial
+ACPI: PCI Interrupt Link [LUAR] enabled at IRQ 38
+serial 0000:01:0b.0: PCI INT A -> Link[LUAR] -> GSI 38 (level, high) -> IRQ 38
+serial 0000:01:0b.0: PCI INT A disabled
+ACPI: PCI Interrupt Link [LAEP] enabled at IRQ 44
+intelce_aep 0000:01:07.0: PCI INT A -> Link[LAEP] -> GSI 44 (level, high) -> IRQ 44
+Trying to free nonexistent resource <00000000df8c0000-00000000df8cffff>
+intelce_aep 0000:01:07.0: PCI INT A disabled
+intelce_aep: probe of 0000:01:07.0 failed with error -1
+toshiba: not a supported Toshiba laptop
+Linux agpgart interface v0.103
+[drm] Initialized drm 1.1.0 20060810
+brd: module loaded
+loop: module loaded
+ACPI: PCI Interrupt Link [LPNT] enabled at IRQ 41
+p_unit_access_drv 0000:00:1e.0: PCI INT A -> Link[LPNT] -> GSI 41 (edge, high) -> IRQ 41
+SCSI Media Changer driver v0.25
+physmap platform flash device: 08000000 at c0000000
+physmap-flash physmap-flash.0: map_probe failed
+Intel(R) SPI FLASH CONTROLLER Driver built on Jan 18 2019 @ 11:05:47
+ce5xx-spi-flash 0000:01:17.0: csr iobase 0xdffe0100, iosize 0x100 , mapped to 0xc7c1c100
+ce5xx-spi-flash 0000:01:17.0: mem iobase 0xd8000000, iosize 0x4000000 , mapped to 0xc7d00000
+ce5xx-spi-flash 0000:01:17.0: can't setup spi1.0, status -19
+ce5xx-spi-flash 0000:01:17.0: can't create new device for nmyx25
+e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+e1000: Copyright (c) 1999-2006 Intel Corporation.
+ACPI: PCI Interrupt Link [LGBE] enabled at IRQ 45
+e1000 0000:01:0c.0: PCI INT A -> Link[LGBE] -> GSI 45 (level, high) -> IRQ 45
+GMUX setting: GMAC0 is connected to internal switch (RGMII0)
+GBE working in Internal Fake Phy Mode
+e1000 0000:01:0c.0: eth0: (PCI:33MHz:32-bit) 00:10:18:00:00:01
+e1000 0000:01:0c.0: eth0: Intel(R) PRO/1000 Network Connection
+e1000e: Intel(R) PRO/1000 Network Driver - 1.3.10-k2
+e1000e: Copyright(c) 1999 - 2011 Intel Corporation.
+udma -  Intel (R) UDMA Driver - 1.0.0
+
+udma -  Copyright (c) 2012 Intel Corperation.
+
+ACPI: PCI Interrupt Link [LLW0] enabled at IRQ 30
+udma 0000:01:00.0: PCI INT A -> Link[LLW0] -> GSI 30 (level, high) -> IRQ 30
+Intel(R) UDMA Port 0 Device Driver Init Done
+ACPI: PCI Interrupt Link [LLW1] enabled at IRQ 31
+udma 0000:01:01.0: PCI INT A -> Link[LLW1] -> GSI 31 (level, high) -> IRQ 31
+Intel(R) UDMA Port 1 Device Driver Init Done
+eth_udma0: Features changed: 0x00004800 -> 0x00004000
+eth_udma1: Features changed: 0x00004800 -> 0x00004000
+UDMA Network Device Driver init
+ixgbe: Intel(R) 10 Gigabit PCI Express Network Driver - version 3.2.9-k2
+ixgbe: Copyright (c) 1999-2011 Intel Corporation.
+ixgb: Intel(R) PRO/10GbE Network Driver - version 1.0.135-k2-NAPI
+ixgb: Copyright (c) 1999-2008 Intel Corporation.
+e100: Intel(R) PRO/100 Network Driver, 3.5.24-k2-NAPI
+e100: Copyright(c) 1999-2006 Intel Corporation
+usbcore: registered new interface driver cdc_ether
+usbcore: registered new interface driver cdc_eem
+usbcore: registered new interface driver cdc_subset
+cdc_ncm: 23-Apr-2011
+usbcore: registered new interface driver cdc_ncm
+ACPI: PCI Interrupt Link [LL2W] enabled at IRQ 32
+uio_ce2600 0000:01:1d.0: PCI INT A -> Link[LL2W] -> GSI 32 (level, high) -> IRQ 32
+ACPI: PCI Interrupt Link [LMOC] enabled at IRQ 34
+uio_ce2600 0000:01:1e.0: PCI INT A -> Link[LMOC] -> GSI 34 (level, high) -> IRQ 34
+usbmon: debugfs is not available
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+ACPI: PCI Interrupt Link [LUSB] enabled at IRQ 46
+ehci_hcd 0000:01:0d.0: PCI INT A -> Link[LUSB] -> GSI 46 (level, high) -> IRQ 46
+ehci_hcd 0000:01:0d.0: EHCI Host Controller
+ehci_hcd 0000:01:0d.0: new USB bus registered, assigned bus number 1
+ehci_hcd 0000:01:0d.0: irq 46, io mem 0xdf810100
+ehci_hcd 0000:01:0d.0: USB 0.0 started, EHCI 1.10
+usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb1: Product: EHCI Host Controller
+usb usb1: Manufacturer: Linux 2.6.39 ehci_hcd
+usb usb1: SerialNumber: 0000:01:0d.0
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+ehci_hcd 0000:01:0d.1: PCI INT A -> Link[LUSB] -> GSI 46 (level, high) -> IRQ 46
+ehci_hcd 0000:01:0d.1: EHCI Host Controller
+ehci_hcd 0000:01:0d.1: new USB bus registered, assigned bus number 2
+ehci_hcd 0000:01:0d.1: irq 46, io mem 0xdf820100
+ehci_hcd 0000:01:0d.1: USB 0.0 started, EHCI 1.10
+usb usb2: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+usb usb2: Product: EHCI Host Controller
+usb usb2: Manufacturer: Linux 2.6.39 ehci_hcd
+usb usb2: SerialNumber: 0000:01:0d.1
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+ehci_hcd 0000:01:0d.2: PCI INT A -> Link[LUSB] -> GSI 46 (level, high) -> IRQ 46
+ehci_hcd 0000:01:0d.2: EHCI Host Controller
+ehci_hcd 0000:01:0d.2: new USB bus registered, assigned bus number 3
+ehci_hcd 0000:01:0d.2: irq 46, io mem 0xdf880100
+ehci_hcd 0000:01:0d.2: USB 0.0 started, EHCI 1.10
+usb usb3: New USB device found, idVendor=1d6b, idProduct=0002
+usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Refined TSC clocksource calibration: 599.999 MHz.
+Switching to clocksource tsc
+usb usb3: Product: EHCI Host Controller
+usb usb3: Manufacturer: Linux 2.6.39 ehci_hcd
+usb usb3: SerialNumber: 0000:01:0d.2
+hub 3-0:1.0: USB hub found
+hub 3-0:1.0: 1 port detected
+usbcore: registered new interface driver cdc_acm
+cdc_acm: v0.26:USB Abstract Control Model driver for USB modems and ISDN adapters
+usbcore: registered new interface driver usblp
+usbcore: registered new interface driver cdc_wdm
+usbcore: registered new interface driver usbtmc
+Initializing USB Mass Storage driver...
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+usbcore: registered new interface driver usbserial
+USB Serial support registered for generic
+usbcore: registered new interface driver usbserial_generic
+usbserial: USB Serial Driver core
+USB Serial support registered for FTDI USB Serial Device
+usbcore: registered new interface driver ftdi_sio
+ftdi_sio: v1.6.0:USB FTDI Serial Converters Driver
+i8042: PNP: No PS/2 controller found. Probing ports directly.
+i8042: No controller found
+mousedev: PS/2 mouse device common for all mice
+rtc_cmos rtc_cmos: RTC can wake from S4
+rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+rtc0: alarms up to one month, y3k, 114 bytes nvram, hpet irqs
+cpuidle: using governor ladder
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+sdhci-pci 0000:01:1b.0: SDHCI controller found [8086:070b] (rev 4)
+ACPI: PCI Interrupt Link [LMMC] enabled at IRQ 37
+sdhci-pci 0000:01:1b.0: PCI INT A -> Link[LMMC] -> GSI 37 (level, high) -> IRQ 37
+waiting for eMMC legacy mode exit notification from NPCPU ... ...
+npcpu_appcpu_mbx_send_ack- Writing ack Mask = 0x4 for event = 0x4
+mmc0: SDHCI controller on PCI [0000:01:1b.0] using ADMA
+waiting for eMMC advanced mode exit notification from NPCPU ... ...
+mmc0: new high speed MMC card at address 0001
+mmcblk0: mmc0:0001 MMC128 112 MiB
+mmcblk0: detected capacity change from 0 to 117833728
+ mmcblk0: p1 p2 p3 p4 < p5 p6 p7 p8 p9 p10 p11 p12 p13 >
+mmcblk0: p13 size 34816 extends beyond EOD, truncated
+npcpu_appcpu_mbx_send_notification event id 4, 0x4
+usbcore: registered new interface driver usbhid
+usbhid: USB HID core driver
+oprofile: using NMI interrupt.
+ip_tables: (C) 2000-2006 Netfilter Core Team
+TCP cubic registered
+Initializing XFRM netlink socket
+NET: Registered protocol family 10
+Mobile IPv6
+IPv6 over IPv4 tunneling driver
+sit0: Features changed: 0x00007800 -> 0x00007000
+ip6tnl0: Features changed: 0x00006800 -> 0x00006000
+NET: Registered protocol family 17
+NET: Registered protocol family 15
+Bridge firewalling registered
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+sctp: Hash tables configured (established 4096 bind 4096)
+lib80211: common routines for IEEE802.11 drivers
+Registering the dns_resolver key type
+Using IPI No-Shortcut mode
+rtc_cmos rtc_cmos: setting system clock to 2000-01-01 00:00:14 UTC (946684814)
+ADDRCONF(NETDEV_UP): eth0: link is not ready
+e1000: eth0 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+8021q: adding VLAN 0 to HW filter on device eth0
+ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+IP-Config: Guessing netmask 255.255.255.0
+IP-Config: Complete:
+     device=eth0, addr=192.168.100.100, mask=255.255.255.0, gw=255.255.255.255,
+     host=192.168.100.100, domain=, nis-domain=(none),
+     bootserver=255.255.255.255, rootserver=255.255.255.255, rootpath=
+VFS: Mounted root (squashfs filesystem) readonly on device 179:3.
+Freeing unused kernel memory: 400k freed
+init started: BusyBox v1.29.2 (2019-01-18 11:14:32 CST)
+starting pid 809, tty '': '/etc/init.d/rcS'
+##### Starting Scripts #####
+*** /etc/rc3.d/avcap_core not found, skipping
+*** /etc/rc3.d/avcap_ce4X00 not found, skipping
+*** /etc/rc3.d/avcap_si not found, skipping
+*** /etc/rc3.d/alsa_shim not found, skipping
+*** /etc/rc3.d/alsa not found, skipping
+*** /etc/rc3.d/avcap_rx_ce not found, skipping
+*** /etc/rc3.d/directfb not found, skipping
+*** /etc/rc3.d/graphics_2d not found, skipping
+*** /etc/rc3.d/dhsauto_init not found, skipping
+*** /etc/rc3.d/graphics not found, skipping
+*** /etc/rc3.d/expbus not found, skipping
+*** /etc/rc3.d/edl not found, skipping
+*** /etc/rc3.d/display not found, skipping
+*** /etc/rc3.d/psb6973_start not found, skipping
+*** /etc/rc3.d/gentimer not found, skipping
+*** /etc/rc3.d/hl_start not found, skipping
+*** /etc/rc3.d/hdmi not found, skipping
+*** /etc/rc3.d/en2510_start not found, skipping
+*** /etc/rc3.d/init_pic_uart not found, skipping
+*** /etc/rc3.d/libvirt not found, skipping
+### Start system_setup
+*** /etc/rc3.d/qemu_kvm not found, skipping
+*** /etc/rc3.d/sec_fw_1100 not found, skipping
+*** /etc/rc3.d/sec_fw_3030 not found, skipping
+*** /etc/rc3.d/sec_fw_2000 not found, skipping
+*** /etc/rc3.d/sec_fw_3040 not found, skipping
+*** /etc/rc3.d/smd_avcap_shim not found, skipping
+*** /etc/rc3.d/sec_fw_hdcp2 not found, skipping
+*** /etc/rc3.d/sec_fw_playready2 not found, skipping
+*** /etc/rc3.d/wifi not found, skipping
+*** /etc/rc3.d/sec_fw_mediavault not found, skipping
+system_setup SUCCESS
+### Start /etc/rc3.d/inetd
+inetd SUCCESS
+### Start /etc/rc3.d/pal
+### Start /etc/rc3.d/udev
+PAL driver init...
+Device: CE2600
+Stepping: D0
+pal SUCCESS
+### Start /etc/rc3.d/platform_config
+platform_config init complete! (build Jan 18 2019)
+/* LOAD "/etc/platform_config/ce2600/memory_layout.hcfg" to (new) database location "platform.memory.layout"*/
+udev SUCCESS
+### Start /etc/rc3.d/kernel
+kernel SUCCESS
+MEU is disabled.
+PMRs are disabled.
+sh: 1: unknown operand
+/* EXECUTE config database location "platform.startup"*/
+### Start /etc/rc3.d/dhcpv6
+### Start /etc/rc3.d/cosai
+dhcpv6 SUCCESS
+platform_config SUCCESS
+### Start /etc/rc3.d/devmem
+cosai SUCCESS
+devmem list is sorted and considated as:
+        base: 0x07400000 size: 0x00b80000 access: 0x00000001
+        base: 0x07f80000 size: 0x00030000 access: 0x00000000
+        base: 0x07fb0000 size: 0x00002000 access: 0x00000001
+devmem load sucessfully. major num is 249.
+devmem SUCCESS
+### Start /etc/rc3.d/osal
+ ESS OSAL release - Built on Jan 18 2019 at 11:07:40.
+osal SUCCESS
+### Start /etc/rc3.d/system_utils
+### Start /etc/rc3.d/thermal
+### Start /etc/rc3.d/sven
+### Start /etc/rc3.d/flashtool
+flashtool SUCCESS
+### Start /etc/rc3.d/gpio
+ln: /lib/libidl_gpio.so: File exists
+### Start /etc/rc3.d/nvram
+thermal init complete! (build Jan 18 2019)
+major number =248
+SVEN init:Jan 18 2019 11:09:59
+sven_open_header(): 328: SVEN Header Initialized cbd8c000@07fb0000:00001000, circbuf cbe00000@07500000:00100000 dis:ffffffff
+intelce_gpio 0000:01:0b.1: CE2600 GPIO controller detected.
+system_utils SUCCESS
+sven_init_dfx_support(): 302: SVEN DFX Enabled @df8f0000:00010000 wpos:0
+sven SUCCESS
+ACPI: PCI Interrupt Link [LIDL] enabled at IRQ 39
+intelce_gpio 0000:01:0b.1: PCI INT B -> Link[LIDL] -> GSI 39 (level, high) -> IRQ 39
+thermal SUCCESS
+init_memorymonitor SUCCESS
+### Start /etc/rc3.d/init_pwm
+### Start /etc/rc3.d/init_watchdog
+### Start /etc/rc3.d/init_iosf
+pwm 0000:01:0b.6: PCI INT B -> Link[LIDL] -> GSI 39 (level, high) -> IRQ 39
+pwm 0000:01:0b.6: 2 channels
+intelce watchdog: Intel CE2600 WatchDog Timer Driver v0.1
+ACPI: PCI Interrupt Link [LWTG] enabled at IRQ 42
+intelce watchdog 0000:01:0f.0: PCI INT A -> Link[LWTG] -> GSI 42 (level, high) -> IRQ 42
+intelce watchdog: initialized (0xcbdde400). heartbeat=68 sec (nowayout=0)
+gpio SUCCESS
+init_iosf SUCCESS
+init_pwm SUCCESS
+### Start /etc/rc3.d/init_punit_fw_upgrade
+### Start /etc/rc3.d/idl
+memorymonitor start! <kick interval = 2 seconds> <buffer threadhold = 3000 bytes>
+init_watchdog SUCCESS
+Atom Watchdog daemon started <kick interval = 30 seconds>
+/dev/mmcblk0p6: recovering journal
+CE2600 Smartcard Controller found currently!
+scard_pci_driver 0000:01:0b.3: PCI INT B -> Link[LIDL] -> GSI 39 (level, high) -> IRQ 39
+i2c /dev entries driver
+/dev/mmcblk0p6 has been mounted 1 times without being checked, check forced.
+/dev/mmcblk0p6: 33/256 files (9.1% non-contiguous), 1172/2048 blocks
+The partition mmcblk0p6 was scan with fsck and the return value is 0
+kjournald starting.  Commit interval 5 seconds
+EXT3-fs (mmcblk0p6): using internal journal
+EXT3-fs (mmcblk0p6): mounted filesystem with journal data mode
+Change reboot to atom only reboot
+nvram SUCCESS
+Running firmware is the latest one.
+idl SUCCESS
+### Start /etc/rc3.d/rpc_ifconfig_init
+### Start /etc/rc3.d/telnetd
+### Start /etc/rc3.d/clock_control
+/etc/rc3.d/telnetd: is being skipped.  Precluded by DOCSIS compliance.
+telnetd SUCCESS
+clock_control SUCCESS
+rpc_ifconfig:main
+Waiting for RPC-IF mailbox event from NP-CPU...
+### Start /etc/rc3.d/intel_ce_pm
+init_punit_fw_upgrade SUCCESS
+ICEPM GPIOs:: WIFI 88 : SATA 1 : PCIE 100 : SC -1 : Ext Tuner -1 : GbE -1
+intel_ce_pm SUCCESS
+### Start /etc/rc3.d/mspod
+### Start /etc/rc3.d/sec
+ Platform CE2600_BOARD_HP doesn't support CableCARD. Skipping MSPOD Driver load.
+mspod SUCCESS
+dma_tracker_init: initialized
+ACPI: PCI Interrupt Link [LSEC] enabled at IRQ 36
+pci 0000:01:09.0: PCI INT A -> Link[LSEC] -> GSI 36 (level, high) -> IRQ 36
+sec_hal_set_irq: os_pci_get_interrupt returned SEC IRQ=36
+sec_hal_set_irq: os_acquire_interrupt installed the SEC
+ interrupt handler, sec_hal_intr_func, to IRQ number=36
+pmr_count=0 and enable_tdp = 0
+***g_cw_enabled=0
+Setting snoop configuration... SUCCESS
+SEC ROM Version 0x05030106
+find: /lib/firmware/sec: No such file or directory
+Initializing TDP... SUCCESS
+sec SUCCESS
+### Start /etc/rc3.d/smd_core
+ Clock config is 0.
+ Default clock domain is 1.
+ Initializing CE2600 Clock HAL
+ACPI: PCI Interrupt Link [LCRS] enabled at IRQ 27
+ismdclock 0000:01:0c.1: PCI INT B -> Link[LCRS] -> GSI 27 (level, high) -> IRQ 27
+smd_core SUCCESS
+### Start /etc/rc3.d/smd
+Intel SMD Demux Ver3 Module built on Jan 18 2019 @ 11:20:05
+ACPI: PCI Interrupt Link [LTSD] enabled at IRQ 29
+pci 0000:01:14.0: PCI INT A -> Link[LTSD] -> GSI 29 (level, high) -> IRQ 29
+ACPI: PCI Interrupt Link [LTSP] enabled at IRQ 28
+pci 0000:01:04.0: PCI INT A -> Link[LTSP] -> GSI 28 (level, high) -> IRQ 28
+Demux Ver3 Secure load disabled
+Demux Loading tsd_fw_ver3_1.bin
+Demux Ver3 memory path is coherent.
+smd SUCCESS
+### Start /etc/rc3.d/runtime_pm
+runtime_pm SUCCESS
+rpc_ifconfig:mgm_rpc_net_if_setup RPC IF INFO:
+rpc_ifconfig:mgm_rpc_net_if_setup NP-CPU IPV4 ADDR 192.168.254.253
+rpc_ifconfig:mgm_rpc_net_if_setup APP-CPU IPV4 ADDR 192.168.254.254
+rpc_ifconfig:mgm_rpc_net_if_setup Network MASK ADDR 255.255.255.0
+rpc_ifconfig:mgm_rpc_net_if_setup RPC-IF Vlan-ID 4093
+rpc_ifconfig:mgm_rpc_net_if_setup Bring up the APP-CPU RPC IF
+rpc_ifconfig DEBUG:mgm_rpc_net_if_setup vconfig add eth0 4093
+rpc_ifconfig DEBUG:mgm_rpc_net_if_setup ifconfig eth0.4093 192.168.254.254 netmask 255.255.255.0
+0:      from all lookup local
+32766:  from all lookup main
+32767:  from all lookup default
+rpc_ifconfig_init SUCCESS
+### Start network
+### Start /etc/rc3.d/portmap_init
+portmap_init SUCCESS
+### Start /etc/rc3.d/rpc_management_srv_init
+### Start /etc/rc3.d/rpc_wlan_srv_init
+rpc_wlan_srv_init SUCCESS
+rpc_management_srv_init SUCCESS
+### Start /etc/rc3.d/rpc_up_and_running
+### Start /etc/rc3.d/init_punit_fw_upgrade_notification
+Sending the RPC notification -UP_AND_RUNNING to NP...
+### Start /etc/rc3.d/icepm_gateway
+WLAN RPC Server IP addr 192.168.254.254
+WLAN RPC server bind successfully to 192.168.254.254
+Server IP addr 192.168.254.254
+Client IP addr 192.168.254.253
+RPC management server bind successfully to 192.168.254.254
+Debug: rpcMgm_registerRpc RPC client registered with RPC server 192.168.254.253
+Debug: rpcMgm_sendUpAndRunning RPC rpcMgm_sendUpAndRunning done with result OK
+rpc_up_and_running SUCCESS
+icepm_gateway SUCCESS
+Debug: rpcMgm_registerRpc RPC client registered with RPC server 192.168.254.253
+Running firmware is the latest one. No need to upgrade it
+init_punit_fw_upgrade_notification SUCCESS
+device eth0.2 entered promiscuous mode
+device eth0 entered promiscuous mode
+ROUTER_MODE=3
+br2: port 1(eth0.2) entering forwarding state
+br2: port 1(eth0.2) entering forwarding state
+cp: can't stat '/etc/wpa2_/*': No such file or directory
+sh: /root/.ath/apcfg: not found
+export ATH_countrycode=841
+export AP_STARTMODE=multi
+Args: 1
+mem_manager: module license 'unspecified' taints kernel.
+Disabling lock debugging due to kernel taint
+ath_dfs: Version 2.0.0
+Copyright (c) 2005-2006 Atheros Communications, Inc. All Rights Reserved
+ath_spectral: Version 2.0.0
+Copyright (c) 2005-2009 Atheros Communications, Inc. All Rights Reserved
+ath_hal: 0.9.17.1 (AR5416, AR9380, WRITE_EEPROM, 11D)
+ath_rate_atheros: Copyright (c) 2001-2005 Atheros Communications, Inc, All Rights Reserved
+ath_tx99: Version 2.0
+Copyright (c) 2010 Atheros Communications, Inc, All Rights Reserved
+ath_dev: Copyright (c) 2001-2007 Atheros Communications, Inc, All Rights Reserved
+ath_da_pci: 10.4-0.1.719.026 (Atheros/multi-bss)
+ath_da_pci 0000:02:00.0: PCI INT A -> GSI 16 (level, low) -> IRQ 16
+ath_pci_probe num_radios=0, wifi_radios[0].sc = c50e0440 wifi_radio_type = 1
+__ath_attach: Set global_scn[0]
+*** All the minfree values should be <= ATH_TXBUF-32, otherwise default value will be used instead ***
+ACBKMinfree = 48
+ACBEMinfree = 32
+ACVIMinfree = 16
+ACVOMinfree = 0
+CABMinfree = 48
+UAPSDMinfree = 0
+ATH_TXBUF=2700
+Restoring Cal data from FS
+qdf_fs_read[59], Open File /nvram/calData_11n.bin SUCCESS!!file system magic:61267super blocksize:1024inode 23file size:1088
+ART Version : 65.0
+SW Image Version : -48.0.0.0.0
+Board Revision :
+ar9300_attach: nf_2_nom -110 nf_2_max -60 nf_2_min -125
+SPECTRAL : get_capability not registered
+HAL_CAP_PHYDIAG : Capable
+SPECTRAL : Need to fix the capablity check for RADAR (spectral_attach : 237)
+SPECTRAL : get_capability not registered
+HAL_CAP_RADAR   : Capable
+SPECTRAL : Need to fix the capablity check for SPECTRAL
+ (spectral_attach : 242)
+SPECTRAL : get_capability not registered
+HAL_CAP_SPECTRAL_SCAN : Capable
+SPECTRAL : get_tsf64 not registered
+spectral_init_netlink 78 NULL SKB
+SPECTRAL : No ADVANCED SPECTRAL SUPPORT
+SPECTRAL :----- module attached
+Green-AP : Green-AP : Attached
+
+ath_get_caps[6169] rx chainmask mismatch actual 7 sc_chainmak 0
+ath_get_caps[6144] tx chainmask mismatch actual 7 sc_chainmak 0
+band steering initialized for direct attach hardware
+ieee80211_bsteering_attach: Band steering initialized
+acfg_attach: 2961: Netlink socket created:c678da00
+ath_attach_dfs[12594] dfsdomain 1
+dfs_attach: event log enabled by default
+SPECTRAL : module already attached
+ath_attach: Set global_ic[1]..gloabl_ic ptr:cdae66c0
+osif_wrap_attach:443 osif wrap attached
+osif_wrap_devt_init:404 osif wrap dev table init done
+ Wrap Attached: Wrap_com =c66c3400 ic->ic_wrap_com=c66c3400 &wrap_com->wc_devt=c66c3400
+ath_tx_paprd_init sc c5258000 PAPRD disabled in HAL
+ath_da_pci 0000:02:00.0: wifi0: Features changed: 0x00004800 -> 0x00004000
+wifi0: Atheros 9380: mem=0xbfee0000, irq=16 hw_base=0xcce40000
+insmod: can't insert '/lib/modules/2.6.39/net/acfg_mod.ko': No such file or directory
+ath_ol_pci: 10.4-0.1.719.026 (Atheros/multi-bss)
+hif_pci_enable_bus: con_mode = 0x0, device_id = 0x3c
+ath_ol_pci 0000:03:00.0: PCI INT A -> GSI 17 (level, low) -> IRQ 17
+hif_pci_enable_bus: hif_enable_pci donehif_pci_enable_bus: hif_type = 0x6, target_type = 0x7hif_pci_enable_bus: hif_pci_probe_tgt_wakeup donehif_configure_irq: Ehif_configure_msi: Ehif_configure_msi: num_msi_desired = 8, available_msi = 1hif_configure_msi: use single msi
+hif_configure_msi: X, ret = 0hif_target_sync: Loop checking FW signalhif_target_sync: Got FW signal, retries = 0hif_config_ce: ce_init donehif_config_ce: X, ret = 0hif_set_hia: Ehif_set_hia_extnd: E
+
+ CLOCK PLL skipped
+hif_pci_bus_configure: hif_set_hia donehif_enable: X OK
+__ol_ath_attach() Allocated scn c5680440
+__ol_ath_attach: dev name wifi1
+ol_ath_attach interface_id 1
+ol_target_init() BMI inited.
+ol_target_init() BMI Get Target Info.
+Chip id: 0x7, chip version: 0x4100016c
+
+ CE WAR Disabled
+NUM_DEV=1 FWMODE=0x2 FWSUBMODE=0x0 FWBR_BUF 0
+ol_target_init() configure Target .
+ol_transfer_bin_file: flash data file defined
+ol_transfer_bin_file[3764] Get Caldata for wifi1.
+qdf_fs_read[59], Open File /nvram/calData_qca.bin SUCCESS!!file system magic:61267super blocksize:1024inode 21file size:2116qc98xx_verify_checksum: flash checksum passed: 0x602d
+ol_transfer_bin_file 3825: Download Flash data len 2116
+Board extended Data download address: 0x0
+
+ Mission mode: Firmware CHIP Version 0
+ol_transfer_bin_file: Downloading firmware file: AR9888/hw.2/athwlan.bin
+ol_transfer_bin_file 3645: downloading file 1, Download data len 240704
+ol_target_init() Download FW done.
+ol_ath_attach() WMI attached. wmi_handle c5d22000
+wmi_unified_register_event_handler: Event id 62 is unavailable
++htc_create ..  HIF :c5678000-htc_create: (0xc6fc7800)
+htc_wmi_init() HT Create . c6fc7800
+htc_wmi_init 7521 host_enable 1 nss_nwifi_offload 0
+ol_ath_set_default_tgt_config : AC Minfree buffer allocation through module param (umac.ko)
+ OL_ACBKMinfree : 0
+ OL_ACBEMinfree : 0
+ OL_ACVIMinfree : 0
+ OL_ACVOMinfree : 0
+hif_enable_fastpath, Enabling fastpath mode
++HWT
+hif_completion_thread_startup: pipe_num:0 pipe_info:0xc567c578hif_completion_thread_startup: pipe_num:3 pipe_info:0xc567c650hif_completion_thread_startup: pipe_num:4 pipe_info:0xc567c698
+-HWT
+Startup Mode-0 set
+
+<=== cfg max peer id 1056 ====>
+htt_peer_map_timer_init Enter pdev c4db0000 hrtimer c4db4928
+
+ htt_alloc_peer_map_mem : Alloc Success : host q vaddr c6c52000 paddr 6c52000
+
+ htt_alloc_peer_map_mem : Flush Interval Configured to 256 pkts
+ol_txrx_pdev_attach: 1424 tx desc's allocated ; range starts from c4a00000
+Firmware_Build_Number:0
+host/RAM_fw Build Ver Mismatch: H:0x7, F:0x0 !
+FW wireless modes: 0x1f9001
+num_rf_chain:0x00000003  ht_cap_info:0x0000085b  vht_cap_info:0x338001b2  vht_supp_mcs:0x0000ffea
+wmi_service_coex_gpio 0, wmi_service_4_wire_coex_support 0, coex_version 0
+
+Sending Ext resource cfg: HOST PLATFORM as 1
+fw_feature_bitmap as 50 to TGT
+ol_ath_service_ready_event: tt_support: 0
+ol_ath_service_ready_event: periodic_chan_stats: 1
+ol_ath_service_ready_event: sw_cal_support_check_flag: 0
+LARGE_AP enabled. num_peers 144, num_vdevs 16, num_tids 256
+idx 0 req 1  num_units 0 num_unit_info 2 unit size 440 actual units 145
+ol_ath_alloc_host_mem_chunk req_id 1 idx 0 num_units 145 unit_len 440,
+Support not added yet for Service 91
+Support not added yet for Service 92
+No EXT_MSG send INIT now
+chunk 0 len 63800 requested , ptr  0x4a50000
+FIRMWARE:P 145 V 16 T 443
+
+Version = 16777216 3  status = 0
+ol_ath_connect_htc() WMI is ready
+target uses HTT version 2.2; host uses 2.2
+htt_h2t_frag_desc_bank_cfg_msg - HTT_H2T_MSG_TYPE_FRAG_DESC_BANK_CFG sent to FW for radio ID = 1
+ol_ath_attach() connect HTC.
+bypasswmi : 0
+ol_regdmn_start: reg-domain param: regdmn=0, countryName=, wModeSelect=FFFFFFFF, netBand=FFFFFFFF, extendedChanMode=0.
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2) flags 0x2150
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4) flags 0xa0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x8) flags 0xc0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x20) flags 0xd0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x40) flags 0x150
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x800) flags 0x10080
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2000) flags 0x20080
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4000) flags 0x40080
+Add VHT80 channel: 5210
+Add VHT80 channel: 5290
+Add VHT80 channel: 5530
+Add VHT80 channel: 5610
+Add VHT80 channel: 5690
+Add VHT80 channel: 5775
+Skipping VHT80 channel 5825
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x200000) flags 0x4000100
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x400000) flags 0x8000100
+freq=58
+freq=106
+freq=122
+OL Resmgr Init-ed
+ieee80211_bsteering_attach: Band steering initialized
+acfg_attach: using existing sock c678da00
+ pktlog_init: Initializing Pktlog for AR9888, pktlog_hdr_size = 16
+SPECTRAL : get_capability not registered
+HAL_CAP_PHYDIAG : Capable
+SPECTRAL : Need to fix the capablity check for RADAR (spectral_attach : 237)
+SPECTRAL : get_capability not registered
+HAL_CAP_RADAR   : Capable
+SPECTRAL : Need to fix the capablity check for SPECTRAL
+ (spectral_attach : 242)
+SPECTRAL : get_capability not registered
+HAL_CAP_SPECTRAL_SCAN : Capable
+SPECTRAL : get_tsf64 not registered
+spectral_init_netlink 78 NULL SKB
+Green-AP : Green-AP : Attached
+
+Green-AP : Attached
+ol_ath_smart_ant_attach: Hardware doest not support Smart Antenna.
+ol_if_dfs_attach: called; ptr=c4a81984, radar_info=c524fc7c
+dfs_attach: event log enabled by default
+>>>> CB Set   (null)
+ol_ath_attach() UMAC attach .
+
+ BURSTING enabled by default
+ol_ath_attach: Set global_ic[2] ..ptr:cdae66c0
+ath_lowi_if_netlink_init LOWI Netlink successfully created
+osif_wrap_attach:443 osif wrap attached
+osif_wrap_devt_init:404 osif wrap dev table init done
+ Wrap Attached: Wrap_com =c5c40600 ic->ic_wrap_com=c5c40600 &wrap_com->wc_devt=c5c40600
+__ol_ath_attach: hard_header_len reservation 74
+ath_ol_pci 0000:03:00.0: wifi1: Features changed: 0x00004800 -> 0x00004000
+ol_ath_thermal_mitigation_attach: TT not supported in FW
+ol_ath_pci_probe num_radios=1, wifi_radios[1].sc = c5680440 wifi_radio_type = 2
+ath_sysfs_diag_init: diag_fsattr
+ wifi0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ wifi1:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ath_net80211_dfs_clist_update: called, cmd=1, nollist=  (null), nentries=0
+ath_attach_dfs[12594] dfsdomain 1
+dfs_attach: event log enabled by default
+isCountryCodeValid: EEPROM regdomain 0x0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2) flags 0x2150
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4) flags 0xa0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x8) flags 0xc0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x20) flags 0xd0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x40) flags 0x150
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x800) flags 0x10080
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2000) flags 0x20080
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4000) flags 0x40080
+Add VHT80 channel: 5210
+Add VHT80 channel: 5290
+Add VHT80 channel: 5530
+Add VHT80 channel: 5690
+Add VHT80 channel: 5775
+Skipping VHT80 channel 5580
+Skipping VHT80 channel 5825
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x200000) flags 0x4000100
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x400000) flags 0x8000100
+freq=58
+freq=106
+[wifi1] FWLOG: [48014] WAL_DBGID_TX_AC_BUFFER_SET ( 0x3, 0x1e, 0x460, 0x460, 0x0 )
+[wifi1] FWLOG: [48014] WAL_DBGID_TX_AC_BUFFER_SET ( 0x12, 0x1e, 0x460, 0x460, 0x0 )
+[wifi1] FWLOG: [48014] WAL_DBGID_TX_AC_BUFFER_SET ( 0x45, 0x1e, 0x460, 0x460, 0x0 )
+[wifi1] FWLOG: [48014] WAL_DBGID_TX_AC_BUFFER_SET ( 0x67, 0x1e, 0x460, 0x460, 0x0 )
+[wifi1] FWLOG: [48016] WHAL_ERROR_RESET_PM (  )
+[wifi1] FWLOG: [48023] WAL_DBGID_DEV_RESET ( 0x1, 0x1, 0x1 )
+[wifi1] FWLOG: [48777] ANI Enable:  1
+[wifi1] FWLOG: [48777] WHAL_ERROR_RESET_PM (  )
+[wifi1] FWLOG: [48785] WAL_DBGID_DEV_RESET ( 0x1, 0x1, 0x1 )
+network SUCCESS
+### Start /etc/rc3.d/samba
+ls: /var/samba/private: No such file or directory
+ls: /var/samba/share: No such file or directory
+samba SUCCESS
+##### Starting Scripts Complete ######
+
+
+
+Please press Enter to activate this console.
+linuxRmtUsbThread: recv -- kIPC_CMDUSBUConfUpdate
+rm: can't remove '/var/passwd': No such file or directory
+Changing password for admin
+New password:
+Retype password:
+passwd: can't create '/nvram/etc/passwd+': File exists
+passwd: can't update password file /etc/passwd
+br2: port 1(eth0.2) entering forwarding state
+rm: can't remove '/var/.http_passwd': No such file or directory
+samba stop!
+samba start!
+usb_ipc_socket uses obsolete (PF_INET,SOCK_PACKET)
+adduser: user 'admin' in use
+Added user admin.
+wlan_get_status_3_svc  WLAN RPC server : [index 0]
+wlan_getStatus: index = 0
+ath0      No such device
+
+wlan_get_status_3_svc  WLAN RPC server : [len = 8]
+wlan_get_status_3_svc  WLAN RPC server : [status Disable]
+wlan_get_stats_3_svc  WLAN RPC server : [index 0]
+apstats: Error - VAP Interface name invalid.
+wlan_getStats: get Wlan_ErrorsReceived failed
+wlan_get_stats_3_svc  WLAN RPC server :
+wlan_get_basic_stats_3_svc  WLAN RPC server : [index 0]
+ifconfig: ath0: error fetching interface information: Device not found
+wlan_getBasicStats: get rx packets statistics failed
+wlan_get_basic_stats_3_svc  WLAN RPC server :
+wlan_get_bssid_3_svc  WLAN RPC server : [index 0]
+ifconfig: ath0: error fetching interface information: Device not found
+wlan_get_bssid_3_svc  WLAN RPC server : [len = 18]
+wlan_get_bssid_3_svc  WLAN RPC server : [bssid 00:00:00:00:00:00]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [index 0]
+ath0      No such device
+
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [len = 1]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [maxBitRate ]
+wlan_get_status_3_svc  WLAN RPC server : [index 1]
+wlan_getStatus: index = 1
+ath1      No such device
+
+wlan_get_status_3_svc  WLAN RPC server : [len = 8]
+wlan_get_status_3_svc  WLAN RPC server : [status Disable]
+wlan_get_stats_3_svc  WLAN RPC server : [index 1]
+apstats: Error - VAP Interface name invalid.
+wlan_getStats: get Wlan_ErrorsReceived failed
+wlan_get_stats_3_svc  WLAN RPC server :
+wlan_get_basic_stats_3_svc  WLAN RPC server : [index 1]
+ifconfig: ath1: error fetching interface information: Device not found
+wlan_getBasicStats: get rx packets statistics failed
+wlan_get_basic_stats_3_svc  WLAN RPC server :
+wlan_get_bssid_3_svc  WLAN RPC server : [index 1]
+ifconfig: ath1: error fetching interface information: Device not found
+wlan_get_bssid_3_svc  WLAN RPC server : [len = 18]
+wlan_get_bssid_3_svc  WLAN RPC server : [bssid 00:00:00:00:00:00]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [index 1]
+ath1      No such device
+
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [len = 1]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [maxBitRate ]
+wlan_get_status_3_svc  WLAN RPC server : [index 2]
+wlan_getStatus: index = 2
+ath2      No such device
+
+wlan_get_status_3_svc  WLAN RPC server : [len = 8]
+wlan_get_status_3_svc  WLAN RPC server : [status Disable]
+wlan_get_stats_3_svc  WLAN RPC server : [index 2]
+apstats: Error - VAP Interface name invalid.
+wlan_getStats: get Wlan_ErrorsReceived failed
+wlan_get_stats_3_svc  WLAN RPC server :
+wlan_get_basic_stats_3_svc  WLAN RPC server : [index 2]
+ifconfig: ath2: error fetching interface information: Device not found
+wlan_getBasicStats: get rx packets statistics failed
+wlan_get_basic_stats_3_svc  WLAN RPC server :
+wlan_get_bssid_3_svc  WLAN RPC server : [index 2]
+ifconfig: ath2: error fetching interface information: Device not found
+wlan_get_bssid_3_svc  WLAN RPC server : [len = 18]
+wlan_get_bssid_3_svc  WLAN RPC server : [bssid 00:00:00:00:00:00]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [index 2]
+ath2      No such device
+
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [len = 1]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [maxBitRate ]
+wlan_get_status_3_svc  WLAN RPC server : [index 3]
+wlan_getStatus: index = 3
+ath3      No such device
+
+wlan_get_status_3_svc  WLAN RPC server : [len = 8]
+wlan_get_status_3_svc  WLAN RPC server : [status Disable]
+wlan_get_stats_3_svc  WLAN RPC server : [index 3]
+apstats: Error - VAP Interface name invalid.
+wlan_getStats: get Wlan_ErrorsReceived failed
+wlan_get_stats_3_svc  WLAN RPC server :
+wlan_get_basic_stats_3_svc  WLAN RPC server : [index 3]
+ifconfig: ath3: error fetching interface information: Device not found
+wlan_getBasicStats: get rx packets statistics failed
+wlan_get_basic_stats_3_svc  WLAN RPC server :
+wlan_get_bssid_3_svc  WLAN RPC server : [index 3]
+ifconfig: ath3: error fetching interface information: Device not found
+wlan_get_bssid_3_svc  WLAN RPC server : [len = 18]
+wlan_get_bssid_3_svc  WLAN RPC server : [bssid 00:00:00:00:00:00]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [index 3]
+ath3      No such device
+
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [len = 1]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [maxBitRate ]
+ath_net80211_dfs_clist_update: called, cmd=1, nollist=  (null), nentries=0
+ath_attach_dfs[12594] dfsdomain 1
+dfs_attach: event log enabled by default
+isCountryCodeValid: EEPROM regdomain 0x0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2) flags 0x2150
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4) flags 0xa0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x8) flags 0xc0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x20) flags 0xd0
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x40) flags 0x150
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x800) flags 0x10080
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2000) flags 0x20080
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4000) flags 0x40080
+Add VHT80 channel: 5210
+Add VHT80 channel: 5290
+Add VHT80 channel: 5530
+Add VHT80 channel: 5690
+Add VHT80 channel: 5775
+Skipping VHT80 channel 5580
+Skipping VHT80 channel 5825
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x200000) flags 0x4000100
+ol_regdmn_init_channels: !avail mode 0x1f9001 (0x400000) flags 0x8000100
+freq=58
+freq=106
+ADDRCONF(NETDEV_UP): br10: link is not ready
+ADDRCONF(NETDEV_UP): br20: link is not ready
+device eth0.10 entered promiscuous mode
+br10: port 1(eth0.10) entering forwarding state
+br10: port 1(eth0.10) entering forwarding state
+ADDRCONF(NETDEV_CHANGE): br10: link becomes ready
+device eth0.20 entered promiscuous mode
+br20: port 1(eth0.20) entering forwarding state
+br20: port 1(eth0.20) entering forwarding state
+ADDRCONF(NETDEV_CHANGE): br20: link becomes ready
+ieee80211_mbo_vattach:MBO Initialized
+ieee80211_oce_vattach: OCE Initialized
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+ath0: Features changed: 0x00004b80 -> 0x00004380
+VAP device ath0 created osifp: (c52eac40) os_if: (c4b90000)
+
+ DES SSID SET=The_Internet
+ ieee80211_ioctl_siwmode: imr.ifm_active=131712, new mode=3, valid=1
+siwfreq
+Set freq vap 0 stop send + c4b90000
+Set freq vap 0 stop send -c4b90000
+Set wait done --c4b90000
+
+ DES SSID SET=The_Internet
+ ieee80211_ioctl_siwmode: imr.ifm_active=131712, new mode=3, valid=1
+siwfreq
+Set freq vap 0 stop send + c4b90000
+Set freq vap 0 stop send -c4b90000
+Set wait done --c4b90000
+send_vdev_create_cmd_non_tlv: ID = 0 Type = 1, Subtype = 0 VAP Addr = 3c:37:86:04:71:44:
+ieee80211_mbo_vattach:MBO Initialized
+ieee80211_oce_vattach: OCE Initialized
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+ath1: Features changed: 0x00004b80 -> 0x00004380
+VAP device ath1 created osifp: (c52ec440) os_if: (c4bc0000)
+[wifi1] FWLOG: [84440] WHAL_ERROR_RESET_CHANNF1 (  )
+hub 3-0:1.0: over-current condition on port 1
+dlna stop!
+killall: minidlna: no process killed
+ DES SSID SET=The_Better_Internet
+
+dlna start! ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1
+
+siwfreq
+Set freq vap 0 stop send + c4bc0000
+Set freq vap 0 stop send -c4bc0000
+Set wait done --c4bc0000
+http stop!
+
+ DES SSID SET=The_Better_Internet
+ ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1
+siwfreq
+Set freq vap 0 stop send + c4bc0000
+Set freq vap 0 stop send -c4bc0000
+http start!
+ftp stop!
+Set wait done --c4bc0000
+Resetting spectral chainmask to Rx chainmask
+
+linuxRmtUsbThread: recv -- kIPC_CMDUSBUConfUpdate
+ieee80211_mbo_vattach:MBO Initialized
+ieee80211_oce_vattach: OCE Initialized
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+ath2: Features changed: 0x00004b80 -> 0x00004380
+VAP device ath2 created osifp: (c6ed6440) os_if: (c4bf8000)
+
+ DES SSID SET=Netgear-Guest
+ ieee80211_ioctl_siwmode: imr.ifm_active=131712, new mode=3, valid=1
+siwfreq
+Set freq vap 0 stop send + c4b90000
+Set freq vap 0 stop send -c4b90000
+Set wait done --c4b90000
+Set freq vap 1 stop send + c4bf8000
+Set freq vap 1 stop send -c4bf8000
+Set wait done --c4bf8000
+
+ DES SSID SET=Netgear-Guest
+ ieee80211_ioctl_siwmode: imr.ifm_active=131712, new mode=3, valid=1
+siwfreq
+Set freq vap 0 stop send + c4b90000
+Set freq vap 0 stop send -c4b90000
+Set wait done --c4b90000
+Set freq vap 1 stop send + c4bf8000
+Set freq vap 1 stop send -c4bf8000
+Set wait done --c4bf8000
+Loading config file /tmp/mongoose.conf_local
+Mongoose web server v.5.6 serving [/tmp/wwwroot] on port 80
+send_vdev_create_cmd_non_tlv: ID = 1 Type = 1, Subtype = 0 VAP Addr = 42:37:86:04:71:44:
+ieee80211_mbo_vattach:MBO Initialized
+ieee80211_oce_vattach: OCE Initialized
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+ath3: Features changed: 0x00004b80 -> 0x00004380
+VAP device ath3 created osifp: (c6f7bc40) os_if: (c3428000)
+
+ DES SSID SET=Netgear-5G-Guest
+ ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1
+siwfreq
+Set freq vap 0 stop send + c4bc0000
+Set freq vap 0 stop send -c4bc0000
+Set wait done --c4bc0000
+Set freq vap 1 stop send + c3428000
+Set freq vap 1 stop send -c3428000
+Set wait done --c3428000
+
+ DES SSID SET=Netgear-5G-Guest
+ ieee80211_ioctl_siwmode: imr.ifm_active=66176, new mode=3, valid=1
+siwfreq
+Set freq vap 0 stop send + c4bc0000
+Set freq vap 0 stop send -c4bc0000
+Set wait done --c4bc0000
+Set freq vap 1 stop send + c3428000
+Set freq vap 1 stop send -c3428000
+Set wait done --c3428000
+Resetting spectral chainmask to Rx chainmask
+br10: port 1(eth0.10) entering forwarding state
+br20: port 1(eth0.20) entering forwarding state
+8021q: adding VLAN 0 to HW filter on device ath2
+mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+▒▒▒OL vap_start +
+VDEV START
+OL vap_start -
+ol_vdev_start_resp_ev for vap 1 (c5d22000)
+send_wmm_update_cmd_non_tlv:
+su bfee 0 mu bfee 0 su bfer 0 mu bfer 0 impl bf 0 sounding dim 0
+send_vdev_up_cmd_non_tlv for vap 1
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+8021q: adding VLAN 0 to HW filter on device ath3
+device ath0 entered promiscuous mode
+device ath1 entered promiscuous mode
+device ath2 entered promiscuous mode
+br10: port 2(ath2) entering forwarding state
+br10: port 2(ath2) entering forwarding state
+mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+device ath3 entered promiscuous mode
+br20: port 2(ath3) entering forwarding state
+br20: port 2(ath3) entering forwarding state
+STOPPED EVENT for vap 1 (c5d22000)
+send_vdev_down_cmd_non_tlv for vap 1
+OL vap_start +
+VDEV START
+OL vap_start -
+ol_vdev_start_resp_ev for vap 1 (c5d22000)
+su bfee 0 mu bfee 0 su bfer 0 mu bfer 0 impl bf 0 sounding dim 0
+send_vdev_up_cmd_non_tlv for vap 1
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+ ieee80211_ioctl_siwmode: imr.ifm_active=393856, new mode=3, valid=1
+ DEVICE IS DOWN ifname=ath0
+ DEVICE IS DOWN ifname=ath0
+Warning: node not in table 0xc4bd0000
+br2: port 2(ath0) entering forwarding state
+br2: port 2(ath0) entering forwarding state
+8021q: adding VLAN 0 to HW filter on device ath0
+ ieee80211_ioctl_siwmode: imr.ifm_active=18875008, new mode=3, valid=1
+ DEVICE IS DOWN ifname=ath1
+ DEVICE IS DOWN ifname=ath1
+OL vap_start +
+VDEV START
+OL vap_start -
+ol_vdev_start_resp_ev for vap 0 (c5d22000)
+send_wmm_update_cmd_non_tlv:
+su bfee 0 mu bfee 0 su bfer 0 mu bfer 0 impl bf 0 sounding dim 0
+send_vdev_up_cmd_non_tlv for vap 0
+ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+br2: port 3(ath1) entering forwarding state
+br2: port 3(ath1) entering forwarding state
+8021q: adding VLAN 0 to HW filter on device ath1
+ ▒▒[wifi1] FWLOG: [112782] WAL_DBGID_SECURITY_ENCR_EN (  )
+[wifi1] FWLOG: [112782] WAL_DBGID_SECURITY_MCAST_KEY_SET ( 0x1 )
+FIXME:osif_forward_mgmt_to_app: Event length more than expected..dropping
+FIXME:osif_forward_mgmt_to_app: Event length more than expected..dropping
+STOPPED EVENT for vap 0 (c5d22000)
+send_vdev_down_cmd_non_tlv for vap 0
+OL vap_start +
+VDEV START
+OL vap_start -
+ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+STOPPED EVENT for vap 1 (c5d22000)
+send_vdev_down_cmd_non_tlv for vap 1
+ol_vdev_start_resp_ev for vap 0 (c5d22000)
+su bfee 0 mu bfee 0 su bfer 0 mu bfer 0 impl bf 0 sounding dim 0
+send_vdev_up_cmd_non_tlv for vap 0
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+OL vap_start +
+VDEV START
+OL vap_start -
+ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+osif_pltfrm_vap_stop: Not support.
+br10: port 2(ath2) entering forwarding state
+vap1: Init in progress. Delay vap_stop
+vap1: Init in progress. Delay vap_stop
+vap1: Init in progress. Delay vap_stop
+vap1: Init in progress. Delay vap_stop
+vap1: Init in progress. Delay vap_stop
+vap1: Init in progress. Delay vap_stop
+vap1: Init in progress. Delay vap_stop
+ol_vdev_start_resp_ev for vap 1 (c5d22000)
+send_wmm_update_cmd_non_tlv:
+su bfee 0 mu bfee 0 su bfer 0 mu bfer 0 impl bf 0 sounding dim 0
+send_vdev_up_cmd_non_tlv for vap 1
+vap1: Init in progress. Delay vap_stop
+beacon buffer av_wbuf is NULL - Ignoring tsf offset event
+STOPPED EVENT for vap 1 (c5d22000)
+send_vdev_down_cmd_non_tlv for vap 1
+osif_pltfrm_vap_stop: Not support.
+br20: port 2(ath3) entering forwarding state
+        DCS for CW interference mitigation:   1
+        DCS for WLAN interference mitigation: 0
+[wifi1] FWLOG: [113995] WAL_DBGID_DEV_RESET ( 0x1, 0x1, 0x1 )
+[wifi1] FWLOG: [114001] WAL_DBGID_DEV_RESET ( 0x1, 0x1, 0x1 )
+mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+STOPPED EVENT for vap 0 (c5d22000)
+send_vdev_down_cmd_non_tlv for vap 0
+OL vap_start +
+VDEV START
+OL vap_start -
+ol_vdev_start_resp_ev for vap 0 (c5d22000)
+su bfee 0 mu bfee 0 su bfer 0 mu bfer 0 impl bf 0 sounding dim 0
+send_vdev_up_cmd_non_tlv for vap 0
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+WARNING: Fragmentation with HT mode NOT ALLOWED!!
+WARNING: Fragmentation with HT mode NOT ALLOWED!!
+mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+STOPPED EVENT for vap 0 (c5d22000)
+send_vdev_down_cmd_non_tlv for vap 0
+OL vap_start +
+VDEV START
+OL vap_start -
+ol_vdev_start_resp_ev for vap 0 (c5d22000)
+su bfee 0 mu bfee 0 su bfer 0 mu bfer 0 impl bf 0 sounding dim 0
+send_vdev_up_cmd_non_tlv for vap 0
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+mlme_create_infra_bss : Overriding HT40 channel with HT20 channel
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+STOPPED EVENT for vap 0 (c5d22000)
+send_vdev_down_cmd_non_tlv for vap 0
+OL vap_start +
+VDEV START
+OL vap_start -
+ol_vdev_start_resp_ev for vap 0 (c5d22000)
+su bfee 0 mu bfee 0 su bfer 0 mu bfer 0 impl bf 0 sounding dim 0
+send_vdev_up_cmd_non_tlv for vap 0
+__ieee80211_smart_ant_init: Smart Antenna functions are not registered !!!
+ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+sc nodebug 0
+[wifi1] FWLOG: [114479] vap-0 WMI_CMD_PARAMS ( 0xff, 0x40, 0x1 )
+[wifi1] FWLOG: [114541] vap-1 WMI_CMD_PARAMS ( 0xff, 0x40, 0x1 )
+FIXME:osif_forward_mgmt_to_app: Event length more than expected..dropping
+FIXME:osif_forward_mgmt_to_app: Event length more than expected..dropping
+FIXME:osif_forward_mgmt_to_app: Event length more than expected..dropping
+FIXME:osif_forward_mgmt_to_app: Event length more than expected..dropping
+FIXME:osif_forward_mgmt_to_app: Event length more than expected..dropping
+FIXME:osif_forward_mgmt_to_app: Event length more than expected..dropping
+FIXME:osif_forward_mgmt_to_app: Event length more than expected..dropping
+br2: port 2(ath0) entering forwarding state
+br2: port 3(ath1) entering forwarding state
+wlan_get_status_3_svc  WLAN RPC server : [index 0]
+wlan_getStatus: index = 0
+wlan_get_status_3_svc  WLAN RPC server : [len = 3]
+wlan_get_status_3_svc  WLAN RPC server : [status Up]
+wlan_get_stats_3_svc  WLAN RPC server : [index 0]
+wlan_get_stats_3_svc  WLAN RPC server :
+wlan_get_basic_stats_3_svc  WLAN RPC server : [index 0]
+wlan_get_basic_stats_3_svc  WLAN RPC server :
+wlan_get_bssid_3_svc  WLAN RPC server : [index 0]
+wlan_get_bssid_3_svc  WLAN RPC server : [len = 18]
+wlan_get_bssid_3_svc  WLAN RPC server : [bssid 3C:37:86:04:71:43]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [index 0]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [len = 10]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [maxBitRate 216.7 Mb/]
+wlan_get_status_3_svc  WLAN RPC server : [index 1]
+wlan_getStatus: index = 1
+wlan_get_status_3_svc  WLAN RPC server : [len = 3]
+wlan_get_status_3_svc  WLAN RPC server : [status Up]
+wlan_get_stats_3_svc  WLAN RPC server : [index 1]
+wlan_get_stats_3_svc  WLAN RPC server :
+wlan_get_basic_stats_3_svc  WLAN RPC server : [index 1]
+wlan_get_basic_stats_3_svc  WLAN RPC server :
+wlan_get_bssid_3_svc  WLAN RPC server : [index 1]
+wlan_get_bssid_3_svc  WLAN RPC server : [len = 18]
+wlan_get_bssid_3_svc  WLAN RPC server : [bssid 3C:37:86:04:71:44]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [index 1]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [len = 10]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [maxBitRate 1.3 Gb/s ]
+wlan_get_status_3_svc  WLAN RPC server : [index 2]
+wlan_getStatus: index = 2
+wlan_get_status_3_svc  WLAN RPC server : [len = 3]
+wlan_get_status_3_svc  WLAN RPC server : [status Up]
+wlan_get_stats_3_svc  WLAN RPC server : [index 2]
+wlan_get_stats_3_svc  WLAN RPC server :
+wlan_get_basic_stats_3_svc  WLAN RPC server : [index 2]
+wlan_get_basic_stats_3_svc  WLAN RPC server :
+wlan_get_bssid_3_svc  WLAN RPC server : [index 2]
+wlan_get_bssid_3_svc  WLAN RPC server : [len = 18]
+wlan_get_bssid_3_svc  WLAN RPC server : [bssid 42:37:86:04:71:43]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [index 2]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [len = 10]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [maxBitRate 0 kb/s   ]
+wlan_get_status_3_svc  WLAN RPC server : [index 3]
+wlan_getStatus: index = 3
+wlan_get_status_3_svc  WLAN RPC server : [len = 3]
+wlan_get_status_3_svc  WLAN RPC server : [status Up]
+wlan_get_stats_3_svc  WLAN RPC server : [index 3]
+wlan_get_stats_3_svc  WLAN RPC server :
+wlan_get_basic_stats_3_svc  WLAN RPC server : [index 3]
+wlan_get_basic_stats_3_svc  WLAN RPC server :
+wlan_get_bssid_3_svc  WLAN RPC server : [index 3]
+wlan_get_bssid_3_svc  WLAN RPC server : [len = 18]
+wlan_get_bssid_3_svc  WLAN RPC server : [bssid 42:37:86:04:71:44]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [index 3]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [len = 10]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [maxBitRate 0 kb/s   ]
+wlan_get_status_3_svc  WLAN RPC server : [index 0]
+wlan_getStatus: index = 0
+wlan_get_status_3_svc  WLAN RPC server : [len = 3]
+wlan_get_status_3_svc  WLAN RPC server : [status Up]
+wlan_get_stats_3_svc  WLAN RPC server : [index 0]
+wlan_get_stats_3_svc  WLAN RPC server :
+wlan_get_basic_stats_3_svc  WLAN RPC server : [index 0]
+wlan_get_basic_stats_3_svc  WLAN RPC server :
+wlan_get_bssid_3_svc  WLAN RPC server : [index 0]
+wlan_get_bssid_3_svc  WLAN RPC server : [len = 18]
+wlan_get_bssid_3_svc  WLAN RPC server : [bssid 3C:37:86:04:71:43]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [index 0]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [len = 10]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [maxBitRate 216.7 Mb/]
+wlan_get_status_3_svc  WLAN RPC server : [index 1]
+wlan_getStatus: index = 1
+wlan_get_status_3_svc  WLAN RPC server : [len = 3]
+wlan_get_status_3_svc  WLAN RPC server : [status Up]
+wlan_get_stats_3_svc  WLAN RPC server : [index 1]
+wlan_get_stats_3_svc  WLAN RPC server :
+wlan_get_basic_stats_3_svc  WLAN RPC server : [index 1]
+wlan_get_basic_stats_3_svc  WLAN RPC server :
+wlan_get_bssid_3_svc  WLAN RPC server : [index 1]
+wlan_get_bssid_3_svc  WLAN RPC server : [len = 18]
+wlan_get_bssid_3_svc  WLAN RPC server : [bssid 3C:37:86:04:71:44]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [index 1]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [len = 10]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [maxBitRate 1.3 Gb/s ]
+wlan_get_status_3_svc  WLAN RPC server : [index 2]
+wlan_getStatus: index = 2
+wlan_get_status_3_svc  WLAN RPC server : [len = 3]
+wlan_get_status_3_svc  WLAN RPC server : [status Up]
+wlan_get_stats_3_svc  WLAN RPC server : [index 2]
+wlan_get_stats_3_svc  WLAN RPC server :
+wlan_get_basic_stats_3_svc  WLAN RPC server : [index 2]
+wlan_get_basic_stats_3_svc  WLAN RPC server :
+wlan_get_bssid_3_svc  WLAN RPC server : [index 2]
+wlan_get_bssid_3_svc  WLAN RPC server : [len = 18]
+wlan_get_bssid_3_svc  WLAN RPC server : [bssid 42:37:86:04:71:43]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [index 2]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [len = 10]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [maxBitRate 0 kb/s   ]
+wlan_get_status_3_svc  WLAN RPC server : [index 3]
+wlan_getStatus: index = 3
+wlan_get_status_3_svc  WLAN RPC server : [len = 3]
+wlan_get_status_3_svc  WLAN RPC server : [status Up]
+wlan_get_stats_3_svc  WLAN RPC server : [index 3]
+wlan_get_stats_3_svc  WLAN RPC server :
+wlan_get_basic_stats_3_svc  WLAN RPC server : [index 3]
+wlan_get_basic_stats_3_svc  WLAN RPC server :
+wlan_get_bssid_3_svc  WLAN RPC server : [index 3]
+wlan_get_bssid_3_svc  WLAN RPC server : [len = 18]
+wlan_get_bssid_3_svc  WLAN RPC server : [bssid 42:37:86:04:71:44]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [index 3]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [len = 10]
+wlan_get_max_bitrate_3_svc  WLAN RPC server : [maxBitRate 0 kb/s   ]
+
+ WPS Enabled : Ignoring MAC Filtering
+[wifi1] FWLOG: [191585] RATE: ChainMask 3, peer_mac fd:9e, phymode 1044490, ni_flags 0x0621b006, vht_mcs_set 0xfffa, ht_mcs_set 0xffff, legacy_rate_set 0x0000
+[wifi1] FWLOG: [191609] WAL_DBGID_SECURITY_MCAST_KEY_SET ( 0x1 )
+[wifi1] FWLOG: [191646] WAL_DBGID_SECURITY_UCAST_KEY_SET ( 0x0, 0x8e54fd9e )
+[wifi1] FWLOG: [191646] WAL_DBGID_SECURITY_ENCR_EN (  )
+[wifi1] FWLOG: [191646] WAL_DBGID_SECURITY_ALLOW_DATA ( 0x435668 )
+[wifi1] FWLOG: [192096] WAL_DBGID_TX_BA_SETUP ( 0x435668, 0x6, 0x2, 0x10040, 0x8e54fd9e )
+[wifi1] FWLOG: [192096] RATE: ChainMask 3, peer_mac fd:9e, phymode 1044490, ni_flags 0x0621b006, vht_mcs_set 0xfffa, ht_mcs_set 0xffff, legacy_rate_set 0x0000
+[wifi1] FWLOG: [192195] WAL_DBGID_TX_BA_SETUP ( 0x435668, 0x0, 0x0, 0x10040, 0x8e54fd9e )
+[wifi1] FWLOG: [192237] WAL_DBGID_TX_BA_SETUP ( 0x435668, 0x1, 0x0, 0x10040, 0x8e54fd9e )
+
+ WPS Enabled : Ignoring MAC Filtering
+[wifi1] FWLOG: [237839] RATE: ChainMask 3, peer_mac 4:30, phymode 1044490, ni_flags 0x06213006, vht_mcs_set 0xfffa, ht_mcs_set 0xffff, legacy_rate_set 0x0000
+[wifi1] FWLOG: [237907] WAL_DBGID_SECURITY_UCAST_KEY_SET ( 0x0, 0xea0b0430 )
+[wifi1] FWLOG: [237907] WAL_DBGID_SECURITY_ENCR_EN (  )
+[wifi1] FWLOG: [237907] WAL_DBGID_SECURITY_ALLOW_DATA ( 0x4356f0 )
+[wifi1] FWLOG: [249901] WAL_DBGID_TX_BA_SETUP ( 0x4356f0, 0x6, 0x2, 0x10040, 0xea0b0430 )
+[wifi1] FWLOG: [249901] RATE: ChainMask 3, peer_mac 4:30, phymode 1044490, ni_flags 0x06213006, vht_mcs_set 0xfffa, ht_mcs_set 0xffff, legacy_rate_set 0x0000
+[wifi1] FWLOG: [251307] WAL_DBGID_TX_BA_SETUP ( 0x4356f0, 0x0, 0x0, 0x10040, 0xea0b0430 )
+[wifi1] FWLOG: [251341] WAL_DBGID_TX_BA_SETUP ( 0x4356f0, 0x1, 0x0, 0x10040, 0xea0b0430 )
+wlan_get_assoc_devices_num_3_svc  WLAN RPC server : index 0
+wlan_get_assoc_devices_num_3_svc  WLAN RPC server : [assoc_devices_num = 0 ]
+wlan_get_assoc_devices_num_3_svc  WLAN RPC server : index 1
+wlan_get_assoc_devices_num_3_svc  WLAN RPC server : [assoc_devices_num = 2 ]
+wlan_get_assoc_device_3_svc  WLAN RPC server : [index 1] [devIndex 1]
+wlan_get_assoc_device_3_svc  WLAN RPC server : device MAC=8e:54:ac:4d:fd:9e IP=0.0.0.0 enable=1
+wlan_get_assoc_device_3_svc  WLAN RPC server : result->return_data.return_data_len = 88
+wlan_get_assoc_device_3_svc  WLAN RPC server : [index 1] [devIndex 2]
+wlan_get_assoc_device_3_svc  WLAN RPC server : device MAC=ea:0b:bc:86:04:30 IP=0.0.0.0 enable=1
+wlan_get_assoc_device_3_svc  WLAN RPC server : result->return_data.return_data_len = 88
+wlan_get_assoc_devices_num_3_svc  WLAN RPC server : index 2
+wlan_get_assoc_devices_num_3_svc  WLAN RPC server : [assoc_devices_num = 0 ]
+wlan_get_assoc_devices_num_3_svc  WLAN RPC server : index 3
+wlan_get_assoc_devices_num_3_svc  WLAN RPC server : [assoc_devices_num = 0 ]
+
+ WPS Enabled : Ignoring MAC Filtering
+[wifi1] FWLOG: [297067] RATE: ChainMask 1, peer_mac ce:89, phymode 1044490, ni_flags 0x0620b006, vht_mcs_set 0xfffe, ht_mcs_set 0x00ff, legacy_rate_set 0x0000
+[wifi1] FWLOG: [297165] WAL_DBGID_SECURITY_UCAST_KEY_SET ( 0x0, 0x5281ce89 )
+[wifi1] FWLOG: [297165] WAL_DBGID_SECURITY_ENCR_EN (  )
+[wifi1] FWLOG: [297165] WAL_DBGID_SECURITY_ALLOW_DATA ( 0x435778 )
+[wifi1] FWLOG: [297518] WAL_DBGID_TX_BA_SETUP ( 0x435778, 0x6, 0x2, 0x10040, 0x5281ce89 )
+[wifi1] FWLOG: [297518] RATE: ChainMask 1, peer_mac ce:89, phymode 1044490, ni_flags 0x0620b006, vht_mcs_set 0xfffe, ht_mcs_set 0x00ff, legacy_rate_set 0x0000
+[wifi1] FWLOG: [297808] WAL_DBGID_TX_BA_SETUP ( 0x435778, 0x0, 0x0, 0x10040, 0x5281ce89 )
+[wifi1] FWLOG: [297849] WAL_DBGID_TX_BA_SETUP ( 0x435778, 0x1, 0x0, 0x10040, 0x5281ce89 )
